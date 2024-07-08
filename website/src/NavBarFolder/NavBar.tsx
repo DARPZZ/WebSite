@@ -1,6 +1,5 @@
 import { useState } from 'react'; 
-import { decideID } from '../src/scroll';
-
+import { decideID } from '../scroll';
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false); 
 

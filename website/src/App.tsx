@@ -1,11 +1,11 @@
 
 import "./App.css";
 import Links from "./Links";
-import NavBar from "./NavBar";
+import NavBar from "./NavBarFolder/NavBar";
 
 function App() {
   return (
-    <div className=" h-full w-full bg-gray-400">
+    <div className="  bg-gray-400">
       <NavBar></NavBar>
       <Links></Links>
     </div>

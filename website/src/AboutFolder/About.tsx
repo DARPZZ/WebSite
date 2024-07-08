@@ -3,9 +3,9 @@ import PersonBillede from '../assets/Personbillede.jpg'
 function About() {
   return (
     <div className="  h-full w-full px-8">
-      <div className="flex md:flex-row flex-col items-center justify-center md:space-x-28">
-        <div className=" px-8  flex flex-col md:w-4/5  text-black">
-          <h1 className="font-extrabold text-3xl   underline pb-5">About me</h1>
+      <div className="flex md:flex-row flex-col items-center justify-center ">
+        <div className="  flex flex-col   text-black">
+          <h1 className="font-extrabold text-5xl    underline pb-5">About me</h1>
           <p>
             My name is Rasmus, I'm 22 and a junior computer science student
             based in Denmark.
@@ -25,8 +25,8 @@ function About() {
             Throughout my education, I have developed many different things.
           </p>
         </div>
-        <div className="pt-5 px-8">
-        <img id='gmail-image' src={PersonBillede} alt="Gmail"/>
+        <div className="pt-5 ">
+        <img id='gmail-image' src={PersonBillede} />
         </div>
       </div>
     </div>
