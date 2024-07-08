@@ -8,14 +8,15 @@ function NavBar() {
   };
 
   return (
-    <div className="font-extrabold text-blue-300 text-xl">
+    <div className="font-extrabold text-blue-300 ">
 
       <div className="fixed  md:hidden w-full   ">
-        <div className="flex justify-center items-center px-4 py-2">
+        <div className="flex text-xl justify-center items-center px-4 py-2">
           <button className="h-10 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800" onClick={toggleMenu}>
             ☰
           </button>
         </div>
+        
 
         <div className={`flex-col px-4 pb-4 bg- ${isOpen ? 'flex  ' : 'hidden'}`}>
           <button className="  w-full  py-2 hover:text-pink-300" onClick={() => decideID('about')}>
@@ -30,7 +31,7 @@ function NavBar() {
       </div>
 
 
-      <div className="hidden md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-end">
+      <div className="hidden fixed text-3xl z-10  md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-end">
         <button className="hover:text-pink-300" onClick={() => decideID('about')}>
           About
         </button>
