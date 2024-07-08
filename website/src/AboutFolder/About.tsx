@@ -4,8 +4,9 @@ function About() {
   return (
     <div className="  h-full w-full px-8">
       <div className="flex md:flex-row flex-col items-center justify-center ">
-        <div className="  flex flex-col   text-black">
-          <h1 className="font-extrabold text-5xl    underline pb-5">About me</h1>
+        <div className="   text-black">
+          <h1 className="font-extrabold text-5xl   pb-5">About me</h1>
+          <div className='text-lg font font-semibold'>
           <p>
             My name is Rasmus, I'm 22 and a junior computer science student
             based in Denmark.
@@ -24,8 +25,9 @@ function About() {
           <p>
             Throughout my education, I have developed many different things.
           </p>
+          </div>
         </div>
-        <div className="pt-5 ">
+        <div className="pt-5 md:pl-16 ">
         <img id='gmail-image' src={PersonBillede} />
         </div>
       </div>
