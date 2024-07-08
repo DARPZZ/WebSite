@@ -14,7 +14,7 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
-    <div className="p-5 border-2 bg-gradient-to-r from-blue-500 to-purple-500  max-w-sm">
+    <div className="p-5  bg-gradient-to-r from-blue-500 to-purple-500  max-w-sm">
       <div className="">
         <Parallax>
           <img
