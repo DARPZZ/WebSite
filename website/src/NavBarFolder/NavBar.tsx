@@ -12,7 +12,7 @@ function NavBar() {
 
       <div className="fixed  md:hidden w-full   ">
         <div className="flex justify-center items-center px-4 py-2">
-          <button className="text-blue-300 hover:text-pink-300" onClick={toggleMenu}>
+          <button className="h-10 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800" onClick={toggleMenu}>
             ☰
           </button>
         </div>

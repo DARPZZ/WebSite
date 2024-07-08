@@ -20,7 +20,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           <img
             src={project.image}
             alt={project.name}
-            className="  h-60 w-96"
+            className="rounded-lg  h-60 w-96"
           />
         </Parallax>
       </div>
