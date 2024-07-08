@@ -15,9 +15,13 @@ function Home() {
           <h1 className="hover:text-white hover:scale-[1.3] ">s</h1>
         </div>
       </div>
-      <div className="space-y-64 pl-20 flex flex-col" id="about">
+      <div className=" space-y-80">
+      <div className=" md:pl-20 md:justify-center md:items-center justify-start items-start flex flex-col" id="about">
         <About />
-        <Projects/>
+      </div>
+      <div className="md:pl-20  md:justify-center md:items-center justify-start items-start flex flex-col" id="project">
+      <Projects/>
+      </div>
       </div>
     </div>
   );

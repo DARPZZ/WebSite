@@ -1,14 +1,14 @@
-import React from "react";
 
+import PersonBillede from '../assets/Personbillede.jpg'
 function About() {
   return (
-    <div className=" h-full w-full">
-      <div className="flex md:flex-row flex-col  space-x-28">
-        <div className="  flex flex-col w-1/2  text-black">
-          <h1 className="font-extrabold text-3xl  underline pb-5">About me</h1>
+    <div className="  h-full w-full px-8">
+      <div className="flex md:flex-row flex-col items-center justify-center md:space-x-28">
+        <div className=" px-8  flex flex-col md:w-2/5  text-black">
+          <h1 className="font-extrabold text-3xl   underline pb-5">About me</h1>
           <p>
-            My name is Rasmus, I'm 22 and a junior computer science student based
-            in Denmark.
+            My name is Rasmus, I'm 22 and a junior computer science student
+            based in Denmark.
           </p>
           <br />
           <p>
@@ -25,8 +25,8 @@ function About() {
             Throughout my education, I have developed many different things.
           </p>
         </div>
-        <div className=""> 
-            <h1 >Picture here </h1>
+        <div className="pt-5 px-8">
+        <img id='gmail-image' src={PersonBillede} alt="Gmail"/>
         </div>
       </div>
     </div>

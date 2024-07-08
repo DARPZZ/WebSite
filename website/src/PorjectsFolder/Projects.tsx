@@ -21,11 +21,11 @@ function Projects() {
   };
 
   return (
-    <div className="h-full w-full">
-      <h1 className="text-3xl pb-16 font-extrabold underline">Projects</h1>
+    <div className="flex items-center justify-center md:items-start flex-col h-full w-full px-8">
+      <h1 className="text-3xl pb-16  font-extrabold underline">Projects</h1>
       <div className="mt-4 flex flex-col items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <ProjectCard project={Blackjack}></ProjectCard>
           </div>
           <div className="flex justify-center">
