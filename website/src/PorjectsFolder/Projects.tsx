@@ -2,6 +2,7 @@ import React from "react";
 import BlackjackImage from '../assets/Blackjack.png';
 import ProjectCard from "./ProjectCard";
 import MinesweerperPicture from '../assets/MinesweeperPicture.png'
+import SnakePicture from '../assets/Snake.png'
 function Projects() {
   const Blackjack = {
     name: 'Blackjack',
@@ -20,6 +21,14 @@ function Projects() {
     caption: "Mine sweeper",
   };
 
+  const SnakeGame = {
+    name: 'Snake game',
+    image: SnakePicture,
+    description: 'Snake game developed in Java, the objective is to control a snake to eat food pellets and grow longer without colliding with itself or the walls. The game involves a snake that moves across a grid, eating food to score points and increase its length. The challenge is to maneuver the snake effectively while avoiding obstacles and hazards.',
+    seeCode: "https://github.com/DARPZZ/Snake-game",
+    caption: "Snake game",
+  };
+
   return (
     <div className="flex items-center justify-center md:items-start flex-col h-full w-full px-8">
       <h1 className="text-3xl pb-16  font-extrabold underline">Projects</h1>
@@ -30,6 +39,9 @@ function Projects() {
           </div>
           <div className="flex justify-center">
             <ProjectCard project={Minesweeper}></ProjectCard>
+          </div>
+          <div className="flex justify-center">
+            <ProjectCard project={SnakeGame}></ProjectCard>
           </div>
         </div>
       </div>
