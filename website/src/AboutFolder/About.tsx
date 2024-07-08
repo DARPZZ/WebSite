@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="  h-full w-full px-8">
       <div className="flex md:flex-row flex-col items-center justify-center md:space-x-28">
-        <div className=" px-8  flex flex-col md:w-2/5  text-black">
+        <div className=" px-8  flex flex-col md:w-4/5  text-black">
           <h1 className="font-extrabold text-3xl   underline pb-5">About me</h1>
           <p>
             My name is Rasmus, I'm 22 and a junior computer science student
