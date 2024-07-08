@@ -3,8 +3,8 @@ import React from "react";
 function About() {
   return (
     <div className=" h-full w-full">
-      <div className="flex flex-row">
-        <div className="  flex flex-col w-1/2 text-black">
+      <div className="flex md:flex-row flex-col  space-x-28">
+        <div className="  flex flex-col w-1/2  text-black">
           <h1 className="font-extrabold text-3xl  underline pb-5">About me</h1>
           <p>
             My name is Rasmus, I'm 22 and a junior computer science student based
@@ -25,7 +25,7 @@ function About() {
             Throughout my education, I have developed many different things.
           </p>
         </div>
-        <div className="pl-52"> 
+        <div className=""> 
             <h1 >Picture here </h1>
         </div>
       </div>
