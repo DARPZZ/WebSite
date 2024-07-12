@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.108.3",
+    "@react-three/fiber": "^8.16.8",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "framer-motion": "^11.3.2",
@@ -20,6 +22,7 @@
     "react-dom": "^18.3.1",
     "react-next-parallax": "^0.1.0",
     "react-router-dom": "^6.24.1",
+    "three": "^0.166.1",
     "tsparticles": "^3.5.0"
   },
   "devDependencies": {

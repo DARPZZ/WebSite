@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./AboutFolder/About";
 import Projects from "./PorjectsFolder/Projects";
+import TechStack from "./TechStack";
 function Home() {
   return (
     <div className="w-full h-full">
@@ -21,6 +22,9 @@ function Home() {
       </div>
       <div className=" md:justify-center md:items-center justify-start items-start flex flex-col" id="project">
       <Projects/>
+      </div>
+      <div className=" md:justify-center md:items-center justify-start items-start flex flex-col" id="project">
+<TechStack></TechStack>
       </div>
       </div>
     </div>
