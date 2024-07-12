@@ -145,6 +145,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     return () => {
       cleanup();
       window.removeEventListener("resize", resizeRendererToDisplaySize);
+      window.addEventListener("resize", resizeRendererToDisplaySize);
     };
   }, [techStack]);
 
