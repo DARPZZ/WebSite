@@ -16,7 +16,7 @@ function Home() {
         </div>
       </div>
       <div className=" space-y-80">
-      <div className="  md:justify-center md:items-center justify-start items-start flex flex-col" id="about">
+      <div className=" md:justify-center md:items-center justify-start items-start flex flex-col" id="about">
         <About />
       </div>
       <div className=" md:justify-center md:items-center justify-start items-start flex flex-col" id="project">
