@@ -4,15 +4,21 @@ import * as THREE from "three";
 interface ThreeJSStackProps {
   title: string;
   techStack: { name: string; iconUrl: string }[];
+  onTechClosest?: (techName: string) => void; // Optional callback to notify parent
 }
 
-const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
+const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
+  title,
+  techStack,
+  onTechClosest,
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const iconsRef = useRef<THREE.Mesh[]>([]);
   const [texturesLoaded, setTexturesLoaded] = useState(false);
+  const [closestTech, setClosestTech] = useState<string>("");
 
   useEffect(() => {
     let animationId: number | null = null;
@@ -71,7 +77,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
 
           loadedCount++;
           if (loadedCount === techStack.length) {
-            setTexturesLoaded(true); 
+            setTexturesLoaded(true);
           }
         });
       });
@@ -82,11 +88,31 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
       const time = Date.now() * 0.001;
       const cameraPosition = cameraRef.current?.position;
 
+      // Check if techStack is defined and not empty
+      if (techStack && techStack.length > 0) {
+        // Calculate closest tech
+        let closestDistance = Number.MAX_VALUE;
+        let closestTechName = "";
+
+        iconsRef.current.forEach((icon) => {
+          const distance = cameraPosition?.distanceTo(icon.position) || 0;
+          const index = iconsRef.current.indexOf(icon);
+          if (index >= 0 && index < techStack.length) {
+            const techName = techStack[index].name;
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestTechName = techName;
+            }
+          }
+        });
+
+        setClosestTech(closestTechName); // Update closest tech state
+      }
+
       iconsRef.current.forEach((icon, index) => {
         const radius = 30;
         const speed = 0.4;
-        const angle =
-          time * speed + (index / techStack.length) * (2 * Math.PI);
+        const angle = time * speed + (index / techStack.length) * (2 * Math.PI);
 
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
@@ -135,10 +161,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
 
     const cleanup = () => {
       cancelAnimationFrame(animationId as number);
-      if (
-        rendererRef.current &&
-        rendererRef.current.domElement.parentNode
-      ) {
+      if (rendererRef.current && rendererRef.current.domElement.parentNode) {
         rendererRef.current.domElement.parentNode.removeChild(
           rendererRef.current.domElement
         );
@@ -166,6 +189,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
 
   return (
     <div>
+      {closestTech && <h1 className="font-extrabold text-4xl flex flex-col justify-center items-center ">{closestTech}</h1>}
       <div ref={containerRef} style={{ width: "100%", height: "600px" }} />
     </div>
   );

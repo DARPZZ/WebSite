@@ -21,13 +21,21 @@ const TechStack: React.FC = () => {
     { name: 'SQL', iconUrl: sqlImg },
   ];
 
+  const [closestTech, setClosestTech] = React.useState<string>('');
+
   return (
     <div className="w-full px-5">
-      <h2 className="text-5xl font-extrabold text-blue-300 ">Tech Stack</h2>
-      <div className="mt-10 ">
-        
-        <ThreeJSStack title="Tech Stack" techStack={techStack} />
+      
+      <h2 className="text-5xl font-extrabold text-blue-300">Tech Stack</h2>
+      <div className="mt-10">
+      {closestTech && <h1>{closestTech}</h1>}
+        <ThreeJSStack
+          title="Tech Stack"
+          techStack={techStack}
+          onTechClosest={(techName) => setClosestTech(techName)} 
+        />
       </div>
+      
     </div>
   );
 };
