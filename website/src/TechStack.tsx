@@ -23,8 +23,9 @@ const TechStack: React.FC = () => {
 
   return (
     <div className="w-full px-5">
-      <h2 className="text-5xl font-extrabold text-blue-300">Tech Stack</h2>
-      <div className="">
+      <h2 className="text-5xl font-extrabold text-blue-300 ">Tech Stack</h2>
+      <div className="mt-10 ">
+        
         <ThreeJSStack title="Tech Stack" techStack={techStack} />
       </div>
     </div>

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 interface ThreeJSStackProps {
   title: string;
@@ -37,14 +37,14 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     };
 
     const loadIcons = () => {
-      const radius = 30; // Radius of the orbit
-      const angleIncrement = (2 * Math.PI) / techStack.length; // Angle between each icon
-
+      const radius = 500;
+      const angleIncrement = (2 * Math.PI) / techStack.length;
+      const containerWidth = containerRef.current.clientWidth;
       techStack.forEach((tech, index) => {
         const loader = new THREE.TextureLoader();
         loader.load(tech.iconUrl, (texture) => {
           const aspect = texture.image.width / texture.image.height;
-          const iconWidth = 10;
+          const iconWidth = containerWidth * 0.0065;
           const iconHeight = iconWidth / aspect;
 
           const geometry = new THREE.PlaneGeometry(iconWidth, iconHeight);
@@ -71,17 +71,33 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     const animate = () => {
       animationId = requestAnimationFrame(animate);
       const time = Date.now() * 0.001;
+      const cameraPosition = cameraRef.current?.position;
+
       iconsRef.current.forEach((icon, index) => {
-        icon.rotation.y += 0.008; // Rotate around its own axis
-        const radius = 30; 
-        const speed = 0.5; 
-        const angle = time * speed + (index / techStack.length) * (2 * Math.PI); // Adjusted angle based on index
+        const radius = 30;
+        const speed = 0.4;
+        const angle = time * speed + (index / techStack.length) * (2 * Math.PI);
 
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
         icon.position.set(x, 0, z);
+
+        const distance = cameraPosition? cameraPosition.distanceTo(icon.position) : 0;
+
+        const maxDistance = 30;
+        if (distance < maxDistance) {
+          const easingFactor = 0.1;
+          icon.rotation.y += (0 - icon.rotation.y) * easingFactor;
+        } else {
+          
+          icon.rotation.y += 0.02;
+        }
       });
-      rendererRef.current?.render(sceneRef.current as THREE.Scene, cameraRef.current as THREE.Camera);
+
+      rendererRef.current?.render(
+        sceneRef.current as THREE.Scene,
+        cameraRef.current as THREE.Camera
+      );
     };
 
     const resizeRendererToDisplaySize = () => {
@@ -95,7 +111,9 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
         const canvasPixelWidth = width * pixelRatio;
         const canvasPixelHeight = height * pixelRatio;
 
-        const needResize = renderer.domElement.width !== canvasPixelWidth || renderer.domElement.height !== canvasPixelHeight;
+        const needResize =
+          renderer.domElement.width !== canvasPixelWidth ||
+          renderer.domElement.height !== canvasPixelHeight;
         if (needResize) {
           renderer.setSize(width, height, false);
           cameraRef.current.aspect = width / height;
@@ -107,7 +125,9 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     const cleanup = () => {
       cancelAnimationFrame(animationId as number);
       if (rendererRef.current && rendererRef.current.domElement.parentNode) {
-        rendererRef.current.domElement.parentNode.removeChild(rendererRef.current.domElement);
+        rendererRef.current.domElement.parentNode.removeChild(
+          rendererRef.current.domElement
+        );
       }
       rendererRef.current = null;
       sceneRef.current = null;
@@ -119,18 +139,18 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     resizeRendererToDisplaySize();
     animate();
 
-    window.addEventListener('resize', resizeRendererToDisplaySize);
+    window.addEventListener("resize", resizeRendererToDisplaySize);
 
     return () => {
       cleanup();
-      window.removeEventListener('resize', resizeRendererToDisplaySize);
+      window.removeEventListener("resize", resizeRendererToDisplaySize);
     };
   }, [techStack]);
 
   return (
     <div>
-      <div ref={containerRef} className="w-full h-80" />
-      <h1 className="flex flex-col justify-center items-center font-bold">{title}</h1>
+     
+      <div ref={containerRef} style={{ width: "100%", height: "40vh" }} />
     </div>
   );
 };
