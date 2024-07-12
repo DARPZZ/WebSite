@@ -7,6 +7,7 @@ function NavBar() {
     setIsOpen(!isOpen);
   };
 
+
   return (
     <div className="font-extrabold font-serif text-green-400 ">
       <div className="fixed  md:hidden w-full   ">
@@ -41,8 +42,11 @@ function NavBar() {
             Skills
           </button>
           <button className=" w-full py-2 hover:text-pink-300">Contact</button>
+          
         </div>
       </div>
+
+
 
       <div className="hidden fixed text-3xl z-10  md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-end">
         <button
@@ -63,7 +67,15 @@ function NavBar() {
         >
           Skills
         </button>
-        <button className="hover:text-pink-300">Contact</button>
+        <button
+          className="hover:text-pink-300"
+          onClick={() => decideID("w")}
+        >
+          Contact
+        </button>
+
+
+
       </div>
     </div>
   );
