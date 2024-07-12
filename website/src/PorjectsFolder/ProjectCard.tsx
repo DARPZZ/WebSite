@@ -28,13 +28,13 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           </Reveal>
         </Parallax>
         <Reveal>
-          <h1 className="break-words mt-5 text-xl text-green-400 font-bold">
+          <h1 className="break-words mt-5 text-2xl font-serif  text-green-400 font-bold">
             {project.caption}
           </h1>
         </Reveal>
         <div className="mt-5 ">
           <Reveal>
-            <p className="break-words  text-white text-lg">
+            <p className="break-words font-mono  text-white text-lg">
               {project.description}
             </p>
           </Reveal>
@@ -43,7 +43,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       <Reveal width="100%">
         <div className="pt-10">
           <a href={project.seeCode} target="_blank" rel="noopener noreferrer">
-            <button className="bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+            <button className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
               See code
             </button>
           </a>

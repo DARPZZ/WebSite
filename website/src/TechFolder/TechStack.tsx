@@ -27,7 +27,7 @@ const TechStack: React.FC = () => {
     <div className="w-full text-white px-5">
       
      
-      <div className="mt-10">
+      <div className="mt-10 font-serif">
       {closestTech && <h1>{closestTech}</h1>}
         <ThreeJSStack
           title="Tech Stack"

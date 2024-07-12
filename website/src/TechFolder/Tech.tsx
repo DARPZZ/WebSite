@@ -21,7 +21,7 @@ function Tech() {
 
   return (
     <div className="w-full h-full px-5">
-      <h2 className="text-5xl font-extrabold text-green-400">Tech Stack</h2>
+      <h2 className="text-5xl justify-center items-center flex flex-col md:items-baseline font-extrabold text-green-400 font-mono">Tech Stack</h2>
       {screenWidth > 1400 ? (
 
           <TechStack />

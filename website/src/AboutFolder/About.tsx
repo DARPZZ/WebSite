@@ -6,10 +6,10 @@ function About() {
     <div className="  h-full w-full px-8">
       <div className="flex md:flex-row flex-col items-center justify-center ">
         <div className="   text-white">
-          <h1 className="font-extrabold text-5xl text-green-400   pb-5">
+          <h1 className="font-extrabold text-5xl text-green-400 font-serif   pb-5">
             About me
           </h1>
-          <div className="text-lg font font-semibold">
+          <div className="text-lg font-mono font-semibold">
             <Reveal>
               <p>
                 My name is Rasmus, I'm 22 and a junior computer science student
