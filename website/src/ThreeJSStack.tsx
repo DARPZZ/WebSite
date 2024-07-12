@@ -82,14 +82,15 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
         const z = Math.sin(angle) * radius;
         icon.position.set(x, 0, z);
 
-        const distance = cameraPosition? cameraPosition.distanceTo(icon.position) : 0;
+        const distance = cameraPosition
+          ? cameraPosition.distanceTo(icon.position)
+          : 0;
 
         const maxDistance = 30;
         if (distance < maxDistance) {
           const easingFactor = 0.1;
           icon.rotation.y += (0 - icon.rotation.y) * easingFactor;
         } else {
-          
           icon.rotation.y += 0.02;
         }
       });
@@ -149,7 +150,6 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
 
   return (
     <div>
-     
       <div ref={containerRef} style={{ width: "100%", height: "40vh" }} />
     </div>
   );
