@@ -24,9 +24,9 @@ const TechStack: React.FC = () => {
   const [closestTech, setClosestTech] = React.useState<string>('');
 
   return (
-    <div className="w-full px-5">
+    <div className="w-full text-white px-5">
       
-      <h2 className="text-5xl font-extrabold text-blue-300">Tech Stack</h2>
+     
       <div className="mt-10">
       {closestTech && <h1>{closestTech}</h1>}
         <ThreeJSStack

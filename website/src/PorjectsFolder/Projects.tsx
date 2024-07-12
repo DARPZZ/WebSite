@@ -67,7 +67,7 @@ function Projects() {
   return (
     <div className=" flex items-center justify-center  flex-col h-full w-full px-8">
       <div className="w-full">
-        <h1 className="text-5xl pb-8 font-extrabold text-blue-300 ">Projects</h1>
+        <h1 className="text-5xl pb-8 font-extrabold text-green-400 ">Projects</h1>
       </div>
       <div className="flex justify-center">
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

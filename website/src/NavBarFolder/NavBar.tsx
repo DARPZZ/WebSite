@@ -8,7 +8,7 @@ function NavBar() {
   };
 
   return (
-    <div className="font-extrabold text-blue-300 ">
+    <div className="font-extrabold text-green-400 ">
       <div className="fixed  md:hidden w-full   ">
         <div className="flex text-xl justify-center items-center px-4 py-2">
           <button

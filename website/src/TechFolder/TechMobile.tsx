@@ -22,9 +22,9 @@ const TechMobile: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-         <h2 className="text-5xl font-extrabold text-blue-300">Tech Stack</h2>
+         
    
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 text-white text-lg">
       {techStack.map((tech) => (
         <div key={tech.name} className="flex flex-col items-center">
           <img src={tech.iconUrl} alt={tech.name} className="w-24 h-24 object-contain" />
