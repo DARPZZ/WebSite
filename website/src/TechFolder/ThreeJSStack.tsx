@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 interface ThreeJSStackProps {
@@ -12,6 +12,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
   const sceneRef = useRef<THREE.Scene | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const iconsRef = useRef<THREE.Mesh[]>([]);
+  const [texturesLoaded, setTexturesLoaded] = useState(false);
 
   useEffect(() => {
     let animationId: number | null = null;
@@ -39,12 +40,15 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     const loadIcons = () => {
       const radius = 500;
       const angleIncrement = (2 * Math.PI) / techStack.length;
-      const containerWidth = containerRef.current.clientWidth;
+      const containerWidth = containerRef.current!.clientWidth;
+
+      let loadedCount = 0;
+
       techStack.forEach((tech, index) => {
         const loader = new THREE.TextureLoader();
         loader.load(tech.iconUrl, (texture) => {
           const aspect = texture.image.width / texture.image.height;
-          const iconWidth = containerWidth * 0.0065;
+          const iconWidth = 4;
           const iconHeight = iconWidth / aspect;
 
           const geometry = new THREE.PlaneGeometry(iconWidth, iconHeight);
@@ -64,6 +68,11 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
           icon.position.set(x, 0, z);
           sceneRef.current?.add(icon);
           iconsRef.current.push(icon);
+
+          loadedCount++;
+          if (loadedCount === techStack.length) {
+            setTexturesLoaded(true); 
+          }
         });
       });
     };
@@ -76,7 +85,8 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
       iconsRef.current.forEach((icon, index) => {
         const radius = 30;
         const speed = 0.4;
-        const angle = time * speed + (index / techStack.length) * (2 * Math.PI);
+        const angle =
+          time * speed + (index / techStack.length) * (2 * Math.PI);
 
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
@@ -125,7 +135,10 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
 
     const cleanup = () => {
       cancelAnimationFrame(animationId as number);
-      if (rendererRef.current && rendererRef.current.domElement.parentNode) {
+      if (
+        rendererRef.current &&
+        rendererRef.current.domElement.parentNode
+      ) {
         rendererRef.current.domElement.parentNode.removeChild(
           rendererRef.current.domElement
         );
@@ -138,20 +151,22 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({ title, techStack }) => {
     initializeScene();
     loadIcons();
     resizeRendererToDisplaySize();
-    animate();
+
+    if (texturesLoaded) {
+      animate();
+    }
 
     window.addEventListener("resize", resizeRendererToDisplaySize);
 
     return () => {
       cleanup();
       window.removeEventListener("resize", resizeRendererToDisplaySize);
-      window.addEventListener("resize", resizeRendererToDisplaySize);
     };
-  }, [techStack]);
+  }, [techStack, texturesLoaded]);
 
   return (
     <div>
-      <div ref={containerRef} style={{ width: "100%", height: "40vh" }} />
+      <div ref={containerRef} style={{ width: "100%", height: "600px" }} />
     </div>
   );
 };
