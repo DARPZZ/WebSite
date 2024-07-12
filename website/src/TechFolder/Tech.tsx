@@ -1,9 +1,10 @@
-import React from 'react'
-
+import React from "react";
+import TechStack from "./TechStack";
+import { Reveal } from "../Reveal";
 function Tech() {
   return (
-    <div>Tech</div>
-  )
+      <TechStack />
+  );
 }
 
-export default Tech
+export default Tech;
