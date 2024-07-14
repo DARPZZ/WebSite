@@ -122,7 +122,6 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
         const maxDistance = 40;
         if (distance < maxDistance) {
           const easingFactor = 0.1;
-          console.log(distance + "distance")
           icon.rotation.y += (0 - icon.rotation.y) * easingFactor;
         } else {
           icon.rotation.y += 0.02;
