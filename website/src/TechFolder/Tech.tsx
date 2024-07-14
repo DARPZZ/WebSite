@@ -23,7 +23,7 @@ function Tech() {
       <h2 className="text-5xl justify-center items-center flex flex-col md:items-baseline font-extrabold text-green-400 font-mono">
         Tech Stack
       </h2>
-      {screenWidth > 1300 ? (
+      {screenWidth > 700 ? (
         <TechStack />
       ) : (
         <div>

@@ -4,7 +4,7 @@ import * as THREE from "three";
 interface ThreeJSStackProps {
   title: string;
   techStack: { name: string; iconUrl: string }[];
-  onTechClosest?: (techName: string) => void; // Optional callback to notify parent
+  onTechClosest?: (techName: string) => void;
 }
 
 const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
@@ -36,7 +36,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
       directionalLight.position.set(5, 5, 5);
       sceneRef.current.add(directionalLight);
 
-      cameraRef.current.position.set(0, 0, 40);
+      cameraRef.current.position.set(0, 0, 60);
 
       if (rendererRef.current && containerRef.current) {
         containerRef.current.appendChild(rendererRef.current.domElement);
@@ -44,9 +44,9 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
     };
 
     const loadIcons = () => {
-      const radius = 500;
-      const angleIncrement = (2 * Math.PI) / techStack.length;
       const containerWidth = containerRef.current!.clientWidth;
+      const radius = containerWidth / 1;
+      const angleIncrement = (2 * Math.PI) / techStack.length;
 
       let loadedCount = 0;
 
@@ -54,7 +54,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
         const loader = new THREE.TextureLoader();
         loader.load(tech.iconUrl, (texture) => {
           const aspect = texture.image.width / texture.image.height;
-          const iconWidth = 4;
+          const iconWidth = containerWidth < 600 ? 2 : 6;
           const iconHeight = iconWidth / aspect;
 
           const geometry = new THREE.PlaneGeometry(iconWidth, iconHeight);
@@ -88,9 +88,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
       const time = Date.now() * 0.001;
       const cameraPosition = cameraRef.current?.position;
 
-      // Check if techStack is defined and not empty
       if (techStack && techStack.length > 0) {
-        // Calculate closest tech
         let closestDistance = Number.MAX_VALUE;
         let closestTechName = "";
 
@@ -106,25 +104,25 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
           }
         });
 
-        setClosestTech(closestTechName); // Update closest tech state
+        setClosestTech(closestTechName);
       }
 
       iconsRef.current.forEach((icon, index) => {
-        const radius = 30;
-        const speed = 0.4;
+        const containerWidth = containerRef.current!.clientWidth;
+        const radius = containerWidth / 32;
+        const speed = 0.33;
         const angle = time * speed + (index / techStack.length) * (2 * Math.PI);
 
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
         icon.position.set(x, 0, z);
 
-        const distance = cameraPosition
-          ? cameraPosition.distanceTo(icon.position)
-          : 0;
-
-        const maxDistance = 30;
+        const distance = cameraPosition? cameraPosition.distanceTo(icon.position) : 0;
+            
+        const maxDistance = 40;
         if (distance < maxDistance) {
           const easingFactor = 0.1;
+          console.log(distance + "distance")
           icon.rotation.y += (0 - icon.rotation.y) * easingFactor;
         } else {
           icon.rotation.y += 0.02;
@@ -156,6 +154,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
           cameraRef.current.aspect = width / height;
           cameraRef.current.updateProjectionMatrix();
         }
+        
       }
     };
 
@@ -189,7 +188,11 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
 
   return (
     <div>
-      {closestTech && <h1 className="font-extrabold text-4xl flex flex-col justify-center items-center ">{closestTech}</h1>}
+      {closestTech && (
+        <h1 className="font-extrabold text-4xl flex flex-col justify-center items-center text-center sm:text-2xl md:text-3xl lg:text-5xl">
+          {closestTech}
+        </h1>
+      )}
       <div ref={containerRef} style={{ width: "100%", height: "600px" }} />
     </div>
   );
