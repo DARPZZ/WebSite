@@ -54,7 +54,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
         const loader = new THREE.TextureLoader();
         loader.load(tech.iconUrl, (texture) => {
           const aspect = texture.image.width / texture.image.height;
-          const iconWidth = containerWidth < 600 ? 2 : 6;
+          const iconWidth = containerWidth < 700 ? 2 : 6;
           const iconHeight = iconWidth / aspect;
 
           const geometry = new THREE.PlaneGeometry(iconWidth, iconHeight);
