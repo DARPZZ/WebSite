@@ -40,9 +40,7 @@ function About() {
         </div>
         <div className="pt-5 md:pl-16 pr-20 ">
           <Reveal>
-            <Parallax>
-              <img className="rounded-lg " src={PersonBillede} />
-            </Parallax>
+            <img className="rounded-lg " src={PersonBillede} />
           </Reveal>
         </div>
       </div>

@@ -79,8 +79,6 @@ function NavBar() {
           Contact
         </button>
 
-
-
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
         const loader = new THREE.TextureLoader();
         loader.load(tech.iconUrl, (texture) => {
           const aspect = texture.image.width / texture.image.height;
-          const iconWidth = containerWidth < 700 ? 2 : 6;
+          const iconWidth = containerWidth < 700 ? 2 : 4;
           const iconHeight = iconWidth / aspect;
 
           const geometry = new THREE.PlaneGeometry(iconWidth, iconHeight);
@@ -109,7 +109,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
 
       iconsRef.current.forEach((icon, index) => {
         const containerWidth = containerRef.current!.clientWidth;
-        const radius = containerWidth / 32;
+        const radius = containerWidth / 37;
         const speed = 0.33;
         const angle = time * speed + (index / techStack.length) * (2 * Math.PI);
 
