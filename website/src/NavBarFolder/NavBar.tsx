@@ -41,7 +41,12 @@ function NavBar() {
           >
             Skills
           </button>
-          <button className=" w-full py-2 hover:text-pink-300">Contact</button>
+          <button
+            className=" w-full  py-2 hover:text-pink-300"
+            onClick={() => decideID("contact")}
+          >
+            Contact
+          </button>
           
         </div>
       </div>
@@ -69,7 +74,7 @@ function NavBar() {
         </button>
         <button
           className="hover:text-pink-300"
-          onClick={() => decideID("w")}
+          onClick={() => decideID("contact")}
         >
           Contact
         </button>

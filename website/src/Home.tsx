@@ -3,6 +3,7 @@ import About from "./AboutFolder/About";
 import Projects from "./PorjectsFolder/Projects";
 import TechStack from "./TechFolder/TechStack";
 import Tech from "./TechFolder/Tech";
+import Contact from "./ContactFolder/Contact";
 function Home() {
   return (
     <div className="w-full h-full">
@@ -37,6 +38,12 @@ function Home() {
           id="tech"
         >
           <Tech/>
+        </div>
+        <div
+          className=" md:justify-center md:items-center justify-start items-start flex flex-col"
+          id="contact"
+        >
+          <Contact/>
         </div>
       </div>
     </div>
