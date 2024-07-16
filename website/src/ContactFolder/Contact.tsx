@@ -19,7 +19,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-28 h-28" src={GmailImg} />
+              <img className="md:w-28 md:h-28" src={GmailImg} />
             </a>
           </div>
           <div>
@@ -28,7 +28,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-28 h-28" src={linkedImg} />
+              <img className="md:w-28 md:h-28" src={linkedImg} />
             </a>
           </div>
           <div>
@@ -37,7 +37,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className="w-28 h-28" src={githubLogo} />
+              <img className="md:w-28 md:h-28" src={githubLogo} />
             </a>
           </div>
         </div>

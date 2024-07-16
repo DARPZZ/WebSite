@@ -38,9 +38,9 @@ function About() {
             </Reveal>
           </div>
         </div>
-        <div className="pt-5 md:pl-16 pr-20 ">
+        <div className="pt-5 md:pl-16 pr-5 ">
           <Reveal>
-            <img className="rounded-lg " src={PersonBillede} />
+            <img className="rounded-lg  " src={PersonBillede} />
           </Reveal>
         </div>
       </div>
