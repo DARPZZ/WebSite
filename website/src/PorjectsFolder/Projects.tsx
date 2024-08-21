@@ -16,6 +16,7 @@ function Projects() {
       "The game involves a player and a dealer, both receiving cards from a deck of cards. Cards have different values: numbered cards from 2 to 10 have their face value, face cards (jack, queen, king) are valued at 10, and aces can be either 1 or 11 depending on which value benefits the hand more.",
     seeCode: "https://github.com/DARPZZ/Blacjack-real",
     caption: "BlackJack",
+    youtubeLink: '9xZgLO2P3XI',
   };
 
   const minesweeper = {
@@ -25,6 +26,7 @@ function Projects() {
       "In my Minesweeper game developed in C#, the objective is to clear a board without detonating any hidden mines. The game involves a grid of cells, where some cells contain mines and others are safe to click. The challenge is to use logic and deduction to uncover all safe cells without triggering any mines.",
     seeCode: "https://github.com/DARPZZ/Minesweeper",
     caption: "Mine sweeper",
+    youtubeLink: 'cn81ERY_OZI',
   };
 
   const snakeGame = {
@@ -34,6 +36,7 @@ function Projects() {
       "Snake game developed in Java, the objective is to control a snake to eat food pellets and grow longer without colliding with itself or the walls. The game involves a snake that moves across a grid, eating food to score points and increase its length. The challenge is to maneuver the snake effectively while avoiding obstacles and hazards.",
     seeCode: "https://github.com/DARPZZ/Snake-game",
     caption: "Snake game",
+    youtubeLink: 'dIuudb07AI0',
   };
 
   const sensor = {
@@ -43,6 +46,7 @@ function Projects() {
       "In this Python-based program, I created a  rotating sensor that measures distances to objects around it.",
     seeCode: "https://github.com/DARPZZ/radar-graph",
     caption: "Sensor",
+    youtubeLink: 'mQEmvks-Yds',
   };
 
   const nameGuide = {
@@ -52,6 +56,7 @@ function Projects() {
       "Name guide is designed to help people find baby names based on preferences and likes from others. It provides a platform where users can explore and discover baby names that resonate with their personal tastes and interests.",
     seeCode: "https://github.com/DARPZZ/Baby-names",
     caption: "Name guide",
+    youtubeLink: 'xEMd6BL3_5E',
   };
 
   const discord = {

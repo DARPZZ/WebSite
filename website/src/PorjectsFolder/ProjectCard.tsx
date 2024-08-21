@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
+import Modal from "../Modal";
+import YouTubeVideo from "../YouTubeVideo";
 
 interface GitHubProject {
   name: string;
@@ -8,6 +10,7 @@ interface GitHubProject {
   description?: string;
   seeCode: string;
   caption: string;
+  youtubeLink?: string;
 }
 
 interface Props {
@@ -15,6 +18,7 @@ interface Props {
 }
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm flex flex-col justify-between">
       <div>
@@ -41,14 +45,32 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         </div>
       </div>
       <Reveal width="100%">
-        <div className="pt-10">
-          <a href={project.seeCode} target="_blank" rel="noopener noreferrer">
-            <button className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
-              See code
+        <div className=" flex flex-row space-x-5">
+          <div className="pt-10 w-1/2">
+            <a href={project.seeCode} target="_blank" rel="noopener noreferrer">
+              <button className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                See code
+              </button>
+            </a>
+          </div>
+          <div className="pt-10 w-1/2">
+            <button
+              onClick={() => setOpen(true)}
+              className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
+            >
+              See program
             </button>
-          </a>
+          </div>
         </div>
       </Reveal>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <div className="flex flex-col gap-4">
+          <h1 className="text-2xl font-sans font-bold pl-10 text-green-500">
+            {project.caption}
+          </h1>
+          <YouTubeVideo videoId={project.youtubeLink}></YouTubeVideo>
+        </div>
+      </Modal>
     </div>
   );
 };
