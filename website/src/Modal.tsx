@@ -14,7 +14,7 @@ const Modal: React.FC<propTypes> = ({ open, onClose, children }) => {
         onClick={onClose}
       >
         <div
-          className={`rounded-lg shadow p-6 bg-white
+          className={`rounded-lg shadow p-6 bg-slate-200
           transition-all max-w-5xl // Further increased width of modal
           ${open ? "scale-100 opacity-100" : "scale-110 opacity-0"}`}
           onClick={(e) => e.stopPropagation()}
