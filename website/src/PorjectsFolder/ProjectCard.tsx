@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
 import Modal from "../Modal";
 import YouTubeVideo from "../YouTubeVideo";
-
+import useScreenSize from "../useScreenSize";
 interface GitHubProject {
   name: string;
   image: string;
@@ -18,7 +18,29 @@ interface Props {
 }
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [open, setOpen] = useState<boolean>(false);
+  const [showButton, setShowButton] = useState<boolean>(true);
+  const handleResize = () => {
+    setScreenWidth(window.innerWidth);
+    console.log(window.innerWidth);
+    if(window.innerWidth <800)
+    {
+      setShowButton(false);
+    }else{
+      setShowButton(true);
+    }
+  
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    window.dispatchEvent(new Event("resize"));
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [showButton]);
+
   return (
     <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm flex flex-col justify-between">
       <div>
@@ -46,21 +68,23 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       </div>
       <Reveal width="100%">
         <div className=" flex flex-row space-x-5">
-          <div className="pt-10 w-1/2">
+          <div className="pt-10 w-full">
             <a href={project.seeCode} target="_blank" rel="noopener noreferrer">
               <button className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                 See code
               </button>
             </a>
           </div>
-          <div className="pt-10 w-1/2">
-            <button
-              onClick={() => setOpen(true)}
-              className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
-            >
-              See program
-            </button>
-          </div>
+          {showButton && (
+            <div className="pt-10 w-full">
+              <button
+                onClick={() => setOpen(true)}
+                className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
+              >
+                See program
+              </button>
+            </div>
+          )}
         </div>
       </Reveal>
       <Modal open={open} onClose={() => setOpen(false)}>
