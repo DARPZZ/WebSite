@@ -23,7 +23,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   const [showButton, setShowButton] = useState<boolean>(true);
   const handleResize = () => {
     setScreenWidth(window.innerWidth);
-    console.log(window.innerWidth);
+
     if(window.innerWidth <800)
     {
       setShowButton(false);

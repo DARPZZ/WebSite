@@ -13,7 +13,7 @@ const TechStack: React.FC = () => {
   const techStack = [
     { name: 'React', iconUrl: reactImg },
     { name: 'TypeScript', iconUrl: typeScriptImg },
-    { name: 'c#', iconUrl: cSharpImg },
+    { name: 'C#', iconUrl: cSharpImg },
     { name: 'Java', iconUrl: javaImg },
     { name: 'Python', iconUrl: pythonImg },
     { name: 'Github', iconUrl: githubImg },
