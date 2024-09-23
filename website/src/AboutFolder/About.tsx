@@ -12,15 +12,8 @@ function About() {
           <div className="text-lg font-mono font-semibold">
             <Reveal>
               <p>
-                My name is Rasmus, I'm 22 and a junior computer science student
+                My name is Rasmus, I'm 23 and a junior computer science student
                 based in Denmark.
-              </p>
-            </Reveal>
-            <br />
-            <Reveal>
-              <p>
-                My education has equipped me with a solid understanding of
-                programming languages, databases, and system development.
               </p>
             </Reveal>
             <br />
@@ -28,12 +21,6 @@ function About() {
               <p>
                 I am driven by a constant curiosity and a passion for diving
                 into complex technologies and solving problems.
-              </p>
-            </Reveal>
-            <br />
-            <Reveal>
-              <p>
-                Throughout my education, I have developed many different things.
               </p>
             </Reveal>
           </div>

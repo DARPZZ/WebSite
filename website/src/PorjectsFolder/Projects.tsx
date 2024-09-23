@@ -6,6 +6,7 @@ import SnakePicture from "../assets/Snake.png";
 import SensorPicture from "../assets/Sensor.png";
 import DiscordPicture from '../assets/Discord bot.png'
 import NameGuidePicture from "../assets/NameGuide.png";
+import WalkAppPicture from "../assets/WalkApp.jpg"
 function Projects() {
   //#region Projects
   const Blackjack = {
@@ -67,6 +68,14 @@ function Projects() {
     seeCode: "https://github.com/DARPZZ/Discord_BOT",
     caption: "Discord bot",
   };
+  const walkApp=
+  {
+    name: "Walk app",
+    image: WalkAppPicture,
+    description: "My app is written in maui and intergrates Google maps. The aim of the app is the walk the hole city around",
+    seeCode: "https://github.com/DARPZZ/CityRoundApp",
+    caption: "Walk App"
+  }
 
   //#endregion
   return (
@@ -82,6 +91,7 @@ function Projects() {
           <ProjectCard project={sensor}></ProjectCard>
           <ProjectCard project={nameGuide}></ProjectCard>
           <ProjectCard project={discord}></ProjectCard>
+          <ProjectCard project={walkApp}></ProjectCard>
         </div>
       </div>
     </div>
