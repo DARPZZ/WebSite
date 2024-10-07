@@ -54,7 +54,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           </Reveal>
         </Parallax>
         <Reveal>
-          <h1 className="break-words mt-5 text-3xl font-cursive  text-green-400 font-extrabold">
+          <h1 className="break-words mt-5 text-2xl font-serif  text-green-400 font-bold">
             {project.caption}
           </h1>
         </Reveal>

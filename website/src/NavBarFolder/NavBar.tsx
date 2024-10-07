@@ -48,11 +48,11 @@ function NavBar() {
         </div>
       </div>
 
-      <div className="hidden font-cursive fixed text-3xl z-10 md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-end">
-        <button className="hover:text-pink-300 " onClick={() => decideID("about")}>
+      <div className="hidden fixed text-3xl z-10 md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-end">
+        <button className="hover:text-pink-300" onClick={() => decideID("about")}>
           About
         </button>
-        <button className="hover:text-pink-300 " onClick={() => decideID("project")}>
+        <button className="hover:text-pink-300" onClick={() => decideID("project")}>
           Projects
         </button>
         <button className="hover:text-pink-300" onClick={() => decideID("tech")}>

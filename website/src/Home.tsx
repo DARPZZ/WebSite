@@ -11,8 +11,8 @@ function Home() {
         <h1 className="text-white font-extrabold md:text-8xl text-6xl">
           WHO'S
         </h1>
-        <div className=" space-x-1 flex flex-row  font-cursive text-green-400 font-extrabold text-6xl md:text-8xl">
-          <h1 className="hover:text-white hover:scale-[1.3] ">R</h1>
+        <div className=" space-x-1 flex flex-row  text-green-400 font-extrabold text-6xl md:text-8xl">
+          <h1 className="hover:text-white hover:scale-[1.3]">R</h1>
           <h1 className="hover:text-white hover:scale-[1.3] ">a</h1>
           <h1 className="hover:text-white hover:scale-[1.3] ">s</h1>
           <h1 className="hover:text-white hover:scale-[1.3] ">m</h1>

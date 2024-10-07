@@ -5,11 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        'cursive': ['Pacifico', 'cursive']
-      }
-    }
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
