@@ -72,7 +72,8 @@ function Projects() {
   {
     name: "Walk app",
     image: WalkAppPicture,
-    description: "My app is written in maui and intergrates Google maps. The aim of the app is the walk the hole city around",
+    description: 
+    "My app is written in maui and intergrates Google maps. The aim of the app is the walk the hole city around",
     seeCode: "https://github.com/DARPZZ/CityRoundApp",
     caption: "Walk App"
   }
