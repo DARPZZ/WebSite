@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ThreeJSStack from './ThreeJSStack';
 import reactImg from '../assets/TechnoloPic/react.png';
@@ -8,7 +9,7 @@ import pythonImg from '../assets/TechnoloPic/python.png';
 import githubImg from '../assets/TechnoloPic/github.png';
 import dockerImg from '../assets/TechnoloPic/docker.png';
 import sqlImg from '../assets/TechnoloPic/sql.png';
-
+import ALImg from '../assets/TechnoloPic/AL.png'
 const TechStack: React.FC = () => {
   const techStack = [
     { name: 'React', iconUrl: reactImg },
@@ -19,14 +20,13 @@ const TechStack: React.FC = () => {
     { name: 'Github', iconUrl: githubImg },
     { name: 'Docker', iconUrl: dockerImg },
     { name: 'SQL', iconUrl: sqlImg },
+    { name: 'AL', iconUrl: ALImg},
   ];
 
   const [closestTech, setClosestTech] = React.useState<string>('');
 
   return (
     <div className="w-full text-white px-5">
-      
-     
       <div className="mt-10 font-serif">
       {closestTech && <h1>{closestTech}</h1>}
         <ThreeJSStack

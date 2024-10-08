@@ -32,7 +32,7 @@ function Background() {
       {init && (
         <div
           className={`fixed top-0 left-0 w-full h-full ${
-            isMobile ? "-z-10 bg-gray-300" : ""
+            isMobile ? "-z-10 bg-black" : ""
           }`}
         >
           {!isMobile && (
@@ -42,7 +42,7 @@ function Background() {
               options={{
                 background: {
                   color: {
-                    value: "#808080",
+                    value: "#000000",
                   },
                 },
                 fpsLimit: 120,
@@ -85,7 +85,7 @@ function Background() {
                     color: "#ffffff",
                     distance: 150,
                     enable: true,
-                    opacity: 0.5,
+                    opacity: 1,
                     width: 1,
                   },
                   move: {
@@ -99,7 +99,7 @@ function Background() {
                     straight: false,
                   },
                   opacity: {
-                    value: 0.3,
+                    value: 0.6,
                   },
                   shape: {
                     type: "circle",
