@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
 import Modal from "../Modal";
-import YouTubeVideo from "../YouTubeVideo";
+
 import useScreenSize from "../useScreenSize";
 interface GitHubProject {
   name: string;
@@ -21,6 +21,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [open, setOpen] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(true);
+  const url: string = `https://www.youtube.com/watch?v=${project.youtubeLink}`;
   const handleResize = () => {
     setScreenWidth(window.innerWidth);
 
@@ -77,24 +78,17 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           </div>
           {showButton && (
             <div className="pt-10 w-full">
-              <button
-                onClick={() => setOpen(true)}
-                className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
-              >
-                See program
-              </button>
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                <button
+                  className=" font-mono text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
+                >
+                  See program
+                </button>
+              </a>
             </div>
           )}
         </div>
       </Reveal>
-      <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-sans font-bold pl-10 text-green-500">
-            {project.caption}
-          </h1>
-          <YouTubeVideo videoId={project.youtubeLink}></YouTubeVideo>
-        </div>
-      </Modal>
     </div>
   );
 };
