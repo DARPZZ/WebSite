@@ -6,6 +6,15 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rasmus Hermansen</title>
+    <script>
+      if (window.trustedTypes && window.trustedTypes.createPolicy) {
+        window.trustedTypes.createPolicy('default', {
+          createHTML: string => string,
+          createScriptURL: string => string,
+          createScript: string => string,
+        });
+      }
+    </script>
     <script type="module" crossorigin src="/assets/index-DzcQkb9N.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BfxJpS7t.css">
   </head>
