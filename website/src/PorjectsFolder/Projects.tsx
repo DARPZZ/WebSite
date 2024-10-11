@@ -14,7 +14,7 @@ function Projects() {
     name: "Blackjack",
     image: BlackjackImage,
     description:
-      "My Blackjack game developed in Java, the objective is to get as close as possible to 21 points without exceeding it." +
+      "My Blackjack game developed in Java, the objective is to get as close as possible to 21 points without exceeding it. " +
       "The game involves a player and a dealer, both receiving cards from a deck of cards. Cards have different values: numbered cards from 2 to 10 have their face value, face cards (jack, queen, king) are valued at 10, and aces can be either 1 or 11 depending on which value benefits the hand more.",
     seeCode: "https://github.com/DARPZZ/Blacjack-real",
     caption: "BlackJack",
@@ -82,7 +82,7 @@ function Projects() {
   return (
     <div className=" flex items-center justify-center  flex-col h-full w-full px-5">
       <div className="">
-        <h1 className="text-5xl pb-8 font-extrabold font-serif text-green-400 ">Projects</h1>
+        <h1 className="text-5xl pb-8 font-extrabold font-Alegreya text-green-400 ">Projects</h1>
       </div>
       <div className="flex justify-center">
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

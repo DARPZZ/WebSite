@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Alegreya: ['"Alegreya"', 'Alegreya'],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

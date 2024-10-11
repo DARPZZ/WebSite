@@ -188,7 +188,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
   return (
     <div>
       {closestTech && (
-        <h1 className="font-extrabold text-4xl flex flex-col justify-center items-center text-center sm:text-2xl md:text-3xl lg:text-5xl">
+        <h1 className="font-extrabold font-Alegreya text-4xl flex flex-col justify-center items-center text-center sm:text-2xl md:text-3xl lg:text-5xl">
           {closestTech}
         </h1>
       )}

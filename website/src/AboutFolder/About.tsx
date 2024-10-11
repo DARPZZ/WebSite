@@ -9,7 +9,7 @@ function About() {
           <h1 className="font-extrabold text-5xl text-green-400 font-serif   pb-5">
             About me
           </h1>
-          <div className="text-lg font-mono font-semibold">
+          <div className="text-lg font-Alegreya font-semibold">
             <Reveal>
               <p>
                 My name is Rasmus, I'm 23 and a junior computer science student
