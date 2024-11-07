@@ -12,22 +12,28 @@ function About() {
           <div className="text-lg font-Alegreya font-semibold">
             <Reveal>
               <p>
-                My name is Rasmus, I'm 23 and a junior computer science student
-                based in Denmark.
+              My name is Rasmus, and I'm a 23-year-old junior studying computer science in Denmark.
+              I’m deeply motivated by a continuous curiosity and a genuine passion for exploring
+              complex technologies and tackling challenging problems.
               </p>
             </Reveal>
             <br />
             <Reveal>
               <p>
-                I am driven by a constant curiosity and a passion for diving
-                into complex technologies and solving problems.
+              I find excitement in understanding the intricacies of how things work and applying this knowledge to create efficient solutions.
+              </p>
+            </Reveal>
+            <br />
+            <Reveal>
+              <p>
+              My studies and projects allow me to develop and refine my skills, equipping me to approach real-world problems with a thoughtful, technical perspective.
               </p>
             </Reveal>
           </div>
         </div>
         <div className="w-full pt-5 md:pl-16 pr-5 ">
           <Reveal>
-            <img className="rounded-lg  " src={PersonBillede} />
+            <img className="rounded-lg" src={PersonBillede} />
           </Reveal>
         </div>
       </div>

@@ -9,7 +9,7 @@ function NavBar() {
   };
 
   return (
-    <div className="font-extrabold font-serif text-green-400">
+    <div className="font-black font-serif text-indigo-600">
       <div className="fixed text-2xl top-0 left-0 md:hidden w-full z-50">
         <div className="flex  justify-center items-center px-4 py-2">
           <button
@@ -20,9 +20,9 @@ function NavBar() {
           </button>
         </div>
 
-        <div className={`flex-col px-4 pb-4 bg- ${isOpen ? "flex" : "hidden"}`}>
+        <div className={`flex-col px-4 pb-4  ${isOpen ? "flex" : "hidden"}`}>
           <button
-            className="w-full py-2 hover:text-pink-300"
+            className="w-full py-2 hover:text-pink-300 "
             onClick={() => decideID("about")}
           >
             About
