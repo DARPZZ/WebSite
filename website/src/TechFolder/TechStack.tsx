@@ -1,27 +1,10 @@
 
 import React from 'react';
 import ThreeJSStack from './ThreeJSStack';
-import reactImg from '../assets/TechnoloPic/react.png';
-import typeScriptImg from '../assets/TechnoloPic/TS.png';
-import cSharpImg from '../assets/TechnoloPic/CSharp.png';
-import javaImg from '../assets/TechnoloPic/java.png';
-import pythonImg from '../assets/TechnoloPic/python.png';
-import githubImg from '../assets/TechnoloPic/github.png';
-import dockerImg from '../assets/TechnoloPic/docker.png';
-import sqlImg from '../assets/TechnoloPic/sql.png';
-import ALImg from '../assets/TechnoloPic/AL.png'
+import myCurrentTechStack from './TechUsed'
 const TechStack: React.FC = () => {
-  const techStack = [
-    { name: 'React', iconUrl: reactImg },
-    { name: 'TypeScript', iconUrl: typeScriptImg },
-    { name: 'C#', iconUrl: cSharpImg },
-    { name: 'Java', iconUrl: javaImg },
-    { name: 'Python', iconUrl: pythonImg },
-    { name: 'Github', iconUrl: githubImg },
-    { name: 'Docker', iconUrl: dockerImg },
-    { name: 'SQL', iconUrl: sqlImg },
-    { name: 'AL', iconUrl: ALImg},
-  ];
+  
+  
 
   const [closestTech, setClosestTech] = React.useState<string>('');
 
@@ -31,7 +14,7 @@ const TechStack: React.FC = () => {
       {closestTech && <h1>{closestTech}</h1>}
         <ThreeJSStack
           title="Tech Stack"
-          techStack={techStack}
+          techStack={myCurrentTechStack}
           onTechClosest={(techName) => setClosestTech(techName)} 
         />
       </div>

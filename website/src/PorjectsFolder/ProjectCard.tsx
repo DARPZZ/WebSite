@@ -20,6 +20,7 @@ interface Props {
 const ProjectCard: React.FC<Props> = ({ project }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [open, setOpen] = useState<boolean>(false);
+  const [hasLink,setHashLink]= useState<boolean>(true);
   const [showButton, setShowButton] = useState<boolean>(true);
   const url: string = `https://www.youtube.com/watch?v=${project.youtubeLink}`;
   const handleResize = () => {
@@ -33,6 +34,15 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
     }
   
   };
+  const checkIfThereIsLink =()=>
+  {
+    if(project.youtubeLink != null)
+    {
+      setHashLink(true)
+    }else{
+      setHashLink(false)
+    }
+  }
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -41,6 +51,11 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, [showButton]);
+
+  useEffect(()=>{
+    checkIfThereIsLink();
+  },[]);
+
 
   return (
     <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm flex flex-col justify-between">
@@ -68,7 +83,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         </div>
       </div>
       <Reveal width="100%">
-        <div className=" flex flex-row space-x-5">
+        <div className=" flex md:flex-row flex-col md:space-x-5">
           <div className="pt-10 w-full">
             <a href={project.seeCode} target="_blank" rel="noopener noreferrer">
               <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
@@ -76,7 +91,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
               </button>
             </a>
           </div>
-          {showButton && (
+          {hasLink &&(
             <div className="pt-10 w-full">
                 <a href={url} target="_blank" rel="noopener noreferrer">
                 <button
