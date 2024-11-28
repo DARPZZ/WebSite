@@ -7,8 +7,6 @@ function NavBar() {
  const myIcon = "";
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    
-    
   };
 
   return (
@@ -19,32 +17,32 @@ function NavBar() {
             className=" px-6 pt-10 m-2 text-lg text-indigo-100 z-50 transition-colors duration-150 bg-transparent rounded-lg focus:shadow-outline "
             onClick={toggleMenu}
           >
-            <img className="mt-5" src={isOpen ? xIcon : burgermenu} />
+            <img className="" src={isOpen ? xIcon : burgermenu} />
           </button>
         </div>
 
         <div className={`flex-col  px-4 pb-4  ${isOpen ? "flex" : "hidden"}`}>
           <button
             className="w-full py-2 hover:text-pink-300 "
-            onClick={() => decideID("about")}
+            onClick={() => decideID("about",setIsOpen(false))}
           >
             About
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("project")}
+            onClick={() => decideID("project",setIsOpen(false))}
           >
             Projects
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("tech")}
+            onClick={() => decideID("tech",setIsOpen(false))}
           >
             Skills
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("contact")}
+            onClick={() => decideID("contact",setIsOpen(false))}
           >
             Contact
           </button>

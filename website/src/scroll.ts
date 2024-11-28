@@ -4,7 +4,7 @@ export const scrollToTop = () => {
       behavior: 'smooth'
     });
   };
-  export  const decideID = (id: string) => {
+  export  const decideID = (id: string, closeMenu?) => {
       
     const element = document.getElementById(id);
     element?.scrollIntoView({
