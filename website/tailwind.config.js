@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         Alegreya: ['"Alegreya"', 'Alegreya'],
+        TimesNewRoman: ['"Times New Roman"', 'Times', 'serif'],
       },
     },
   },

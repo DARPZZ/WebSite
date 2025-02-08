@@ -4,6 +4,7 @@ import Projects from "./PorjectsFolder/Projects";
 import TechStack from "./TechFolder/TechStack";
 import Tech from "./TechFolder/Tech";
 import Contact from "./ContactFolder/Contact";
+import Testimonial from "./TestimonialFolder/testimonial";
 function Home() {
   return (
     <div className="w-full h-full">
@@ -34,16 +35,22 @@ function Home() {
           <Projects />
         </div>
         <div
+          id="testimonial"
+          className="md:justify-center md:items-center justify-start items-start flex flex-col"
+        >
+         <Testimonial/>
+        </div>
+        <div
           className=" md:justify-center md:items-center justify-start items-start flex flex-col"
           id="tech"
         >
-          <Tech/>
+          <Tech />
         </div>
         <div
           className=" md:justify-center md:items-center justify-start items-start flex flex-col"
           id="contact"
         >
-          <Contact/>
+          <Contact />
         </div>
       </div>
     </div>

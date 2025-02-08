@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { decideID } from "../scroll";
-import burgermenu from '../assets/whiteBurger.png'
-import xIcon from '../assets/whiteX.png'
+import burgermenu from "../assets/whiteBurger.png";
+import xIcon from "../assets/whiteX.png";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
- const myIcon = "";
+  const myIcon = "";
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -24,44 +24,69 @@ function NavBar() {
         <div className={`flex-col  px-4 pb-4  ${isOpen ? "flex" : "hidden"}`}>
           <button
             className="w-full py-2 hover:text-pink-300 "
-            onClick={() => decideID("about",setIsOpen(false))}
+            onClick={() => decideID("about", setIsOpen(false))}
           >
             About
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("project",setIsOpen(false))}
+            onClick={() => decideID("project", setIsOpen(false))}
           >
             Projects
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("tech",setIsOpen(false))}
+            onClick={() => decideID("tech", setIsOpen(false))}
           >
             Skills
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("contact",setIsOpen(false))}
+            onClick={() => decideID("contact", setIsOpen(false))}
           >
             Contact
+          </button>
+          <button
+            className="w-full py-2 hover:text-pink-300"
+            onClick={() => decideID("testimonial", setIsOpen(false))}
+          >
+            Testimonial
           </button>
         </div>
       </div>
 
       <div className="hidden font-Alegreya fixed text-4xl z-10 md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-center">
-        <button className="hover:text-pink-300" onClick={() => decideID("about")}>
+        <button
+          className="hover:text-pink-300"
+          onClick={() => decideID("about")}
+        >
           About
         </button>
-        <button className="hover:text-pink-300" onClick={() => decideID("project")}>
+        <button
+          className="hover:text-pink-300"
+          onClick={() => decideID("project")}
+        >
           Projects
         </button>
-        <button className="hover:text-pink-300" onClick={() => decideID("tech")}>
+        <button
+          className="hover:text-pink-300"
+          onClick={() => decideID("testimonial")}
+        >
+          Testimonial
+        </button>
+        <button
+          className="hover:text-pink-300"
+          onClick={() => decideID("tech")}
+        >
           Skills
         </button>
-        <button className="hover:text-pink-300" onClick={() => decideID("contact")}>
+        <button
+          className="hover:text-pink-300"
+          onClick={() => decideID("contact")}
+        >
           Contact
         </button>
+       
       </div>
     </div>
   );
