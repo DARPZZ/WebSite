@@ -7,7 +7,7 @@ function Testimonial() {
         Testimonial
       </h1>
       <div className="flex justify-center flex-col w-full items-center font-TimesNewRoman  text-wrap text-lg text-white">
-        <div className="w-5/6 bg-black p-14">
+        <div className="md:w-5/6 bg-black p-4 md:p-14">
           <p>
             I have been supervising Rasmus Toft Hermansen during his Computer
             Science internship and AP project period at Hansen Technologies in
