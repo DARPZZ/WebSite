@@ -1,10 +1,10 @@
 import React from "react";
 
-function Testimonial() {
+function References() {
   return (
     <div className="w-full h-full flex flex-col justify-center">
       <h1 className="text-5xl justify-center items-center flex mb-5 md:items-baseline font-extrabold text-green-400 font-mono">
-        Testimonial
+        References
       </h1>
       <div className="flex justify-center flex-col w-full items-center font-TimesNewRoman  text-wrap text-lg text-white">
         <div className="md:w-5/6 bg-black p-4 md:p-14">
@@ -46,11 +46,10 @@ function Testimonial() {
             I have been very pleased with supervising Rasmus during this half
             year given his strong commitment and drive to challenge the status
             quo. I think that Rasmus will be a strong asset to any company.
-           
           </p>
           <br />
           <p className="text-right">
-          Jacob Hansen, Senior Service Delivery Manager, Hansen Denmark
+            Jacob Hansen, Senior Service Delivery Manager, Hansen Denmark
           </p>
         </div>
       </div>
@@ -58,4 +57,4 @@ function Testimonial() {
   );
 }
 
-export default Testimonial;
+export default References;

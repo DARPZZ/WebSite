@@ -48,9 +48,9 @@ function NavBar() {
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("testimonial", setIsOpen(false))}
+            onClick={() => decideID("References", setIsOpen(false))}
           >
-            Testimonial
+            References
           </button>
         </div>
       </div>
@@ -70,9 +70,9 @@ function NavBar() {
         </button>
         <button
           className="hover:text-pink-300"
-          onClick={() => decideID("testimonial")}
+          onClick={() => decideID("References")}
         >
-          Testimonial
+          References
         </button>
         <button
           className="hover:text-pink-300"
