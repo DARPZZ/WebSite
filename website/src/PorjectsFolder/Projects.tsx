@@ -8,6 +8,7 @@ import SensorPicture from "../assets/Sensor.png";
 import DiscordPicture from '../assets/Discord bot.png'
 import NameGuidePicture from "../assets/NameGuide.png";
 import WalkAppPicture from "../assets/WalkApp.jpg"
+import HousePricesPic from "../assets/HousePricesPic.jpg"
 function Projects() {
   //#region Projects
   const Blackjack = {
@@ -20,6 +21,14 @@ function Projects() {
     caption: "BlackJack",
     youtubeLink: '9xZgLO2P3XI',
   };
+  const HousePrices ={
+    name: "House prices",
+    image: HousePricesPic,
+    description:
+    "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
+    seeCode: "https://github.com/DARPZZ/HousePriceing",
+    caption: "House prices"
+  }
 
   const minesweeper = {
     name: "Mine sweeper",
@@ -93,6 +102,7 @@ function Projects() {
           <ProjectCard project={nameGuide}></ProjectCard>
           <ProjectCard project={discord}></ProjectCard>
           <ProjectCard project={walkApp}></ProjectCard>
+          <ProjectCard project={HousePrices}></ProjectCard>
         </div>
       </div>
     </div>
