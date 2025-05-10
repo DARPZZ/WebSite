@@ -1,14 +1,14 @@
-
 import React from "react";
 import BlackjackImage from "../assets/Blackjack.png";
 import ProjectCard from "./ProjectCard";
 import MinesweerperPicture from "../assets/MinesweeperPicture.png";
 import SnakePicture from "../assets/Snake.png";
 import SensorPicture from "../assets/Sensor.png";
-import DiscordPicture from '../assets/Discord bot.png'
+import DiscordPicture from "../assets/Discord bot.png";
 import NameGuidePicture from "../assets/NameGuide.png";
-import WalkAppPicture from "../assets/WalkApp.jpg"
-import HousePricesPic from "../assets/HousePricesPic.jpg"
+import WalkAppPicture from "../assets/WalkApp.jpg";
+import HousePricesPic from "../assets/HousePricesPic.jpg";
+import Recipthelper from "../assets/Recipthelper.png"
 function Projects() {
   //#region Projects
   const Blackjack = {
@@ -19,16 +19,16 @@ function Projects() {
       "The game involves a player and a dealer, both receiving cards from a deck of cards. Cards have different values: numbered cards from 2 to 10 have their face value, face cards (jack, queen, king) are valued at 10, and aces can be either 1 or 11 depending on which value benefits the hand more.",
     seeCode: "https://github.com/DARPZZ/Blacjack-real",
     caption: "BlackJack",
-    youtubeLink: '9xZgLO2P3XI',
+    youtubeLink: "9xZgLO2P3XI",
   };
-  const HousePrices ={
+  const HousePrices = {
     name: "House prices",
     image: HousePricesPic,
     description:
-    "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
+      "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
     seeCode: "https://github.com/DARPZZ/HousePriceing",
-    caption: "House prices"
-  }
+    caption: "House prices",
+  };
 
   const minesweeper = {
     name: "Mine sweeper",
@@ -37,7 +37,7 @@ function Projects() {
       "In my Minesweeper game developed in C#, the objective is to clear a board without detonating any hidden mines. The game involves a grid of cells, where some cells contain mines and others are safe to click. The challenge is to use logic and deduction to uncover all safe cells without triggering any mines.",
     seeCode: "https://github.com/DARPZZ/Minesweeper",
     caption: "Mine sweeper",
-    youtubeLink: 'cn81ERY_OZI',
+    youtubeLink: "cn81ERY_OZI",
   };
 
   const snakeGame = {
@@ -47,7 +47,7 @@ function Projects() {
       "Snake game developed in Java, the objective is to control a snake to eat food pellets and grow longer without colliding with itself or the walls. The game involves a snake that moves across a grid, eating food to score points and increase its length. The challenge is to maneuver the snake effectively while avoiding obstacles and hazards.",
     seeCode: "https://github.com/DARPZZ/Snake-game",
     caption: "Snake game",
-    youtubeLink: 'dIuudb07AI0',
+    youtubeLink: "dIuudb07AI0",
   };
 
   const sensor = {
@@ -57,17 +57,18 @@ function Projects() {
       "In this Python-based program, I created a  rotating sensor that measures distances to objects around it.",
     seeCode: "https://github.com/DARPZZ/radar-graph",
     caption: "Sensor",
-    youtubeLink: 'mQEmvks-Yds',
+    youtubeLink: "mQEmvks-Yds",
   };
 
-  const nameGuide = {
-    name: "Name guide",
-    image: NameGuidePicture,
+  const ReciptHelper = {
+    name: "Recipt Helper",
+    image: Recipthelper,
     description:
-      "Name guide is designed to help people find baby names based on preferences and likes from others. It provides a platform where users can explore and discover baby names that resonate with their personal tastes and interests.",
-    seeCode: "https://github.com/DARPZZ/Baby-names",
-    caption: "Name guide",
-    youtubeLink: 'xEMd6BL3_5E',
+      "Built with React and Remix, this web application helps you securely store and organize your purchase receipts in one place. Whether something breaks, needs a warranty claim, or a return, you’ll always know where to find your proof of purchase.",
+    seeCode: "https://github.com/DARPZZ/ReciptHelper",
+    caption: "Recipt Helper",
+    visitWebSite: "https://darpzz.github.io/ReciptHelper/"
+    
   };
 
   const discord = {
@@ -78,20 +79,22 @@ function Projects() {
     seeCode: "https://github.com/DARPZZ/Discord_BOT",
     caption: "Discord bot",
   };
-  const walkApp=
-  {
+  const walkApp = {
     name: "Walk app",
     image: WalkAppPicture,
-    description: "My app is written in MAUI and intergrates Google maps. The aim of the app is the walk the hole city around",
+    description:
+      "My app is written in MAUI and intergrates Google maps. The aim of the app is the walk the hole city around",
     seeCode: "https://github.com/DARPZZ/CityRoundApp",
-    caption: "Walk App"
-  }
+    caption: "Walk App",
+  };
 
   //#endregion
   return (
     <div className=" flex items-center justify-center  flex-col h-full w-full px-5">
       <div className="">
-        <h1 className="text-5xl pb-8 font-extrabold leading-relaxed font-Alegreya text-green-400 ">Projects</h1>
+        <h1 className="text-5xl pb-8 font-extrabold leading-relaxed font-Alegreya text-green-400 ">
+          Projects
+        </h1>
       </div>
       <div className="flex justify-center">
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -99,7 +102,7 @@ function Projects() {
           <ProjectCard project={minesweeper}></ProjectCard>
           <ProjectCard project={snakeGame}></ProjectCard>
           <ProjectCard project={sensor}></ProjectCard>
-          <ProjectCard project={nameGuide}></ProjectCard>
+          <ProjectCard project={ReciptHelper}></ProjectCard>
           <ProjectCard project={discord}></ProjectCard>
           <ProjectCard project={walkApp}></ProjectCard>
           <ProjectCard project={HousePrices}></ProjectCard>

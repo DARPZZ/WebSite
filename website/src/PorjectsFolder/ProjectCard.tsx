@@ -11,6 +11,7 @@ interface GitHubProject {
   seeCode: string;
   caption: string;
   youtubeLink?: string;
+  visitWebSite?: string;
 }
 
 interface Props {
@@ -20,28 +21,24 @@ interface Props {
 const ProjectCard: React.FC<Props> = ({ project }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [open, setOpen] = useState<boolean>(false);
-  const [hasLink,setHashLink]= useState<boolean>(true);
+  const [hasLink, setHashLink] = useState<boolean>(true);
+  const [hasWebsite,SetHasWbsite] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(true);
   const url: string = `https://www.youtube.com/watch?v=${project.youtubeLink}`;
   const handleResize = () => {
     setScreenWidth(window.innerWidth);
 
-    if(window.innerWidth <800)
-    {
+    if (window.innerWidth < 800) {
       setShowButton(false);
-    }else{
+    } else {
       setShowButton(true);
     }
-  
   };
-  const checkIfThereIsLink =()=>
+
+  function CheckForWbsiteAndLink()
   {
-    if(project.youtubeLink != null)
-    {
-      setHashLink(true)
-    }else{
-      setHashLink(false)
-    }
+      project.visitWebSite != null? SetHasWbsite(true) : SetHasWbsite(false);
+      project.youtubeLink != null? setHashLink(true) : setHashLink(false);
   }
 
   useEffect(() => {
@@ -52,10 +49,9 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
     };
   }, [showButton]);
 
-  useEffect(()=>{
-    checkIfThereIsLink();
-  },[]);
-
+  useEffect(() => {
+    CheckForWbsiteAndLink();
+  }, []);
 
   return (
     <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm flex flex-col justify-between">
@@ -91,12 +87,19 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
               </button>
             </a>
           </div>
-          {hasLink &&(
+          {hasLink && (
             <div className="pt-10 w-full">
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                <button
-                  className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
-                >
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                  See program
+                </button>
+              </a>
+            </div>
+          )}
+          {hasWebsite && (
+            <div className="pt-10 w-full">
+              <a href={project.visitWebSite} target="_blank" rel="noopener noreferrer">
+                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See program
                 </button>
               </a>
