@@ -8,10 +8,11 @@ interface GitHubProject {
   name: string;
   image: string;
   description?: string;
-  seeCode: string;
+  seeCode?: string;
   caption: string;
   youtubeLink?: string;
   visitWebSite?: string;
+  extension?: string;
 }
 
 interface Props {
@@ -22,8 +23,10 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [open, setOpen] = useState<boolean>(false);
   const [hasLink, setHashLink] = useState<boolean>(true);
-  const [hasWebsite,SetHasWbsite] = useState<boolean>(false);
+  const [hasWebsite, SetHasWbsite] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(true);
+  const [isExtension, SetIsExtension] = useState<boolean>(false);
+  const [showSetCode, setShowSetCode] = useState<boolean>(false);
   const url: string = `https://www.youtube.com/watch?v=${project.youtubeLink}`;
   const handleResize = () => {
     setScreenWidth(window.innerWidth);
@@ -35,10 +38,11 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
     }
   };
 
-  function CheckForWbsiteAndLink()
-  {
-      project.visitWebSite != null? SetHasWbsite(true) : SetHasWbsite(false);
-      project.youtubeLink != null? setHashLink(true) : setHashLink(false);
+  function CheckForWbsiteAndLink() {
+    project.visitWebSite != null ? SetHasWbsite(true) : SetHasWbsite(false);
+    project.youtubeLink != null ? setHashLink(true) : setHashLink(false);
+    project.extension != null ? SetIsExtension(true) : SetIsExtension(false);
+    project.seeCode != null ? setShowSetCode(true) : setShowSetCode(false);
   }
 
   useEffect(() => {
@@ -80,13 +84,19 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
       </div>
       <Reveal width="100%">
         <div className=" flex md:flex-row flex-col md:space-x-5">
-          <div className="pt-10 w-full">
-            <a href={project.seeCode} target="_blank" rel="noopener noreferrer">
-              <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
-                See code
-              </button>
-            </a>
-          </div>
+          {showSetCode && (
+            <div className="pt-10 w-full">
+              <a
+                href={project.seeCode}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                  See code
+                </button>
+              </a>
+            </div>
+          )}
           {hasLink && (
             <div className="pt-10 w-full">
               <a href={url} target="_blank" rel="noopener noreferrer">
@@ -98,9 +108,22 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           )}
           {hasWebsite && (
             <div className="pt-10 w-full">
-              <a href={project.visitWebSite} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.visitWebSite}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See program
+                </button>
+              </a>
+            </div>
+          )}
+          {isExtension && (
+            <div className="pt-10 w-full">
+              <a href={project.extension}>
+                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                  See My extensions
                 </button>
               </a>
             </div>

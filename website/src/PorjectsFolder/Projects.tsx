@@ -9,6 +9,7 @@ import NameGuidePicture from "../assets/NameGuide.png";
 import WalkAppPicture from "../assets/WalkApp.jpg";
 import HousePricesPic from "../assets/HousePricesPic.jpg";
 import Recipthelper from "../assets/Recipthelper.png"
+import re from "../assets/re.png"
 function Projects() {
   //#region Projects
   const Blackjack = {
@@ -87,6 +88,13 @@ function Projects() {
     seeCode: "https://github.com/DARPZZ/CityRoundApp",
     caption: "Walk App",
   };
+   const extensionWeb = {
+    name: "Web extension",
+    image: re,
+    description:"A collection of all my cross web browser extensions",
+    extension:"#/see/extensions",
+    caption: "Web extension",
+  };
 
   //#endregion
   return (
@@ -106,6 +114,7 @@ function Projects() {
           <ProjectCard project={discord}></ProjectCard>
           <ProjectCard project={walkApp}></ProjectCard>
           <ProjectCard project={HousePrices}></ProjectCard>
+          <ProjectCard project={extensionWeb}></ProjectCard>
         </div>
       </div>
     </div>
