@@ -11,6 +11,7 @@ import HousePricesPic from "../assets/HousePricesPic.jpg";
 import Recipthelper from "../assets/Recipthelper.png"
 import re from "../assets/re.png"
 function Projects() {
+  const startGithub = "https://github.com/DARPZZ/"
   //#region Projects
   const Blackjack = {
     name: "Blackjack",
@@ -18,7 +19,7 @@ function Projects() {
     description:
       "My Blackjack game developed in Java, the objective is to get as close as possible to 21 points without exceeding it. " +
       "The game involves a player and a dealer, both receiving cards from a deck of cards. Cards have different values: numbered cards from 2 to 10 have their face value, face cards (jack, queen, king) are valued at 10, and aces can be either 1 or 11 depending on which value benefits the hand more.",
-    seeCode: "https://github.com/DARPZZ/Blacjack-real",
+    seeCode: `${startGithub}Blacjack-real`,
     caption: "BlackJack",
     youtubeLink: "9xZgLO2P3XI",
   };
@@ -27,7 +28,7 @@ function Projects() {
     image: HousePricesPic,
     description:
       "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
-    seeCode: "https://github.com/DARPZZ/HousePriceing",
+    seeCode: `${startGithub}HousePriceing`,
     caption: "House prices",
   };
 
@@ -36,7 +37,7 @@ function Projects() {
     image: MinesweerperPicture,
     description:
       "In my Minesweeper game developed in C#, the objective is to clear a board without detonating any hidden mines. The game involves a grid of cells, where some cells contain mines and others are safe to click. The challenge is to use logic and deduction to uncover all safe cells without triggering any mines.",
-    seeCode: "https://github.com/DARPZZ/Minesweeper",
+    seeCode: `${startGithub}Minesweeper`,
     caption: "Mine sweeper",
     youtubeLink: "cn81ERY_OZI",
   };
@@ -46,7 +47,7 @@ function Projects() {
     image: SnakePicture,
     description:
       "Snake game developed in Java, the objective is to control a snake to eat food pellets and grow longer without colliding with itself or the walls. The game involves a snake that moves across a grid, eating food to score points and increase its length. The challenge is to maneuver the snake effectively while avoiding obstacles and hazards.",
-    seeCode: "https://github.com/DARPZZ/Snake-game",
+    seeCode: `${startGithub}Snake-game`,
     caption: "Snake game",
     youtubeLink: "dIuudb07AI0",
   };
@@ -56,7 +57,7 @@ function Projects() {
     image: SensorPicture,
     description:
       "In this Python-based program, I created a  rotating sensor that measures distances to objects around it.",
-    seeCode: "https://github.com/DARPZZ/radar-graph",
+    seeCode: `${startGithub}radar-graph`,
     caption: "Sensor",
     youtubeLink: "mQEmvks-Yds",
   };
@@ -66,7 +67,7 @@ function Projects() {
     image: Recipthelper,
     description:
       "Built with React and Remix, this web application helps you securely store and organize your purchase receipts in one place. Whether something breaks, needs a warranty claim, or a return, you’ll always know where to find your proof of purchase.",
-    seeCode: "https://github.com/DARPZZ/ReciptHelper",
+    seeCode: `${startGithub}ReciptHelper`,
     caption: "Recipt Helper",
     visitWebSite: "https://darpzz.github.io/ReciptHelper/"
     
@@ -77,7 +78,7 @@ function Projects() {
     image: DiscordPicture,
     description:
       "My Discord bot, written in Python, serves the purpose of providing real-time match updates and information across different sports to users on Discord.",
-    seeCode: "https://github.com/DARPZZ/Discord_BOT",
+    seeCode: `${startGithub}Discord_BOT`,
     caption: "Discord bot",
   };
   const walkApp = {
@@ -85,7 +86,7 @@ function Projects() {
     image: WalkAppPicture,
     description:
       "My app is written in MAUI and intergrates Google maps. The aim of the app is the walk the hole city around",
-    seeCode: "https://github.com/DARPZZ/CityRoundApp",
+    seeCode: `${startGithub}CityRoundApp`,
     caption: "Walk App",
   };
    const extensionWeb = {

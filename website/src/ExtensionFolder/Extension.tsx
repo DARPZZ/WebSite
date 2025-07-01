@@ -8,7 +8,7 @@ function Extension() {
   //#region ExTENSIONS REGION
   const GeoGessur = {
     downLoadInstruction: `${startGithub}GeoChromeExtension/blob/main/README.md`,
-    seeCode: `https://github.com/DARPZZ/GeoChromeExtension`,
+    seeCode: `${startGithub}GeoChromeExtension`,
     description:
       "This browser extension enhances your GeoGuessr gameplay by showing the current location directly on a map, helping you get better guesses faster.",
     name: "GeoGuessr",
