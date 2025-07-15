@@ -13,7 +13,7 @@ function About() {
             <Reveal>
               <p>
                 {" "}
-                My name is Rasmus, and I'm a 23-year-old recent computer science
+                My name is Rasmus, and I'm a 24-year-old recent computer science
                 graduate from Denmark. I’m deeply motivated by a continuous
                 curiosity and a genuine passion for exploring complex
                 technologies and tackling challenging problems.{" "}

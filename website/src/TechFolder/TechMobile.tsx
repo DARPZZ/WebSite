@@ -4,7 +4,7 @@ import myCurrentTechStack from './TechUsed'
 const TechMobile: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-    <div className="grid font-mono grid-cols-2 md:grid-cols-4 gap-5 p-5 text-white text-2xl">
+    <div className="grid font-mono grid-cols-2 md:grid-cols-3 gap-5 p-5 text-white text-2xl">
       {myCurrentTechStack.map((tech) => (
         <div key={tech.name} className="flex flex-col items-center">
           <img src={tech.iconUrl} alt={tech.name} className="w-16 h-16" />
