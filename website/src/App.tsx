@@ -29,10 +29,7 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   useEffect(() => {
-    if(location.pathname !== "/")
-    {
-      setShowNavBar(false)
-    }
+    location.pathname !="/" ? setShowNavBar(false) : setShowNavBar(true)
   }, [location]);
   return (
     <div className="h-full">

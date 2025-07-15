@@ -55,7 +55,7 @@ function NavBar() {
         </div>
       </div>
 
-      <div className="hidden font-Alegreya fixed text-4xl z-10 md:flex md:flex-row flex-col space-x-10 space-y-10 w-full pr-10 items-end justify-center">
+      <div className="hidden 4xl:text-7xl font-Alegreya fixed text-4xl z-10 md:flex md:flex-row flex-col space-x-16 space-y-10 w-full pr-10 items-end justify-center">
         <button
           className="hover:text-pink-300"
           onClick={() => decideID("about")}

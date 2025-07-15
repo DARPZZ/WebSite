@@ -101,12 +101,12 @@ function Projects() {
   return (
     <div className=" flex items-center justify-center  flex-col h-full w-full px-5">
       <div className="">
-        <h1 className="text-5xl pb-8 font-extrabold leading-relaxed font-Alegreya text-green-400 ">
+        <h1 className="text-5xl 4xl:text-8xl pb-8 font-extrabold leading-relaxed font-Alegreya text-green-400 ">
           Projects
         </h1>
       </div>
       <div className="flex justify-center">
-        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 4xl:gap-6">
           <ProjectCard project={Blackjack}></ProjectCard>
           <ProjectCard project={minesweeper}></ProjectCard>
           <ProjectCard project={snakeGame}></ProjectCard>
