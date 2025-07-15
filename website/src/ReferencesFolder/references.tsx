@@ -3,11 +3,11 @@ import React from "react";
 function References() {
   return (
     <div className="w-full h-full flex flex-col justify-center">
-      <h1 className="text-5xl justify-center items-center flex mb-5 md:items-baseline font-extrabold text-green-400 font-mono">
+      <h1 className="text-5xl 4xl:text-8xl justify-center items-center flex mb-5 md:items-baseline font-extrabold text-green-400 font-mono">
         References
       </h1>
       <div className="flex justify-center flex-col w-full items-center font-TimesNewRoman  text-wrap text-lg text-white">
-        <div className="md:w-5/6 bg-black p-4 md:p-14">
+        <div className="md:w-5/6 bg-black text-lg 4xl:text-4xl p-4 md:p-14">
           <p>
             I have been supervising Rasmus Toft Hermansen during his Computer
             Science internship and AP project period at Hansen Technologies in

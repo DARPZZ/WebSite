@@ -23,6 +23,11 @@ export default {
         Alegreya: ['"Alegreya"', 'Alegreya'],
         TimesNewRoman: ['"Times New Roman"', 'Times', 'serif'],
       },
+      screens: {
+
+        '3xl': '1920px',
+        '4xl': '2000px',
+      },
     },
   },
   plugins: [
