@@ -58,25 +58,29 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   }, []);
 
   return (
-    <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm flex flex-col justify-between">
-      <div>
+    <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm 4xl:max-w-2xl  flex flex-col justify-between">
+      <div >
+        <div className="w-full flex flex-col  items-center 4xl:p-5">
+
+        
         <Parallax>
           <Reveal>
             <img
               src={project.image}
               alt={project.name}
-              className="rounded-lg h-60 w-96 object-cover"
+              className="rounded-lg 4xl:w-[35rem] 4xl:h-96    h-60 w-96 object-cover"
             />
           </Reveal>
         </Parallax>
+        </div>
         <Reveal>
-          <h1 className="break-words mt-5 text-2xl font-Alegreya  text-green-400 font-bold">
+          <h1 className="break-words mt-5 4xl:text-5xl text-2xl font-Alegreya  text-green-400 font-bold">
             {project.caption}
           </h1>
         </Reveal>
         <div className="mt-5 ">
           <Reveal>
-            <p className="break-words font-Alegreya  text-white text-lg">
+            <p className="break-words font-Alegreya 4xl:text-3xl/relaxed  text-white text-lg">
               {project.description}
             </p>
           </Reveal>
@@ -91,16 +95,16 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className=" 4xl:py-12 4xl:text-4xl   font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See code
                 </button>
               </a>
             </div>
           )}
           {hasLink && (
-            <div className="pt-10 w-full">
+            <div className=" pt-10 w-full">
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className="4xl:py-12 4xl:text-4xl   font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See program
                 </button>
               </a>
@@ -113,7 +117,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className="4xl:py-12 4xl:text-4xl  font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See program
                 </button>
               </a>
@@ -122,7 +126,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           {isExtension && (
             <div className="pt-10 w-full">
               <a href={project.extension}>
-                <button className=" font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className="4xl:py-12 4xl:text-4xl border font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See My extensions
                 </button>
               </a>

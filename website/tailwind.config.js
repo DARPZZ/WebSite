@@ -28,6 +28,13 @@ export default {
         '3xl': '1920px',
         '4xl': '2000px',
       },
+       fontSize: {
+        '6xl': '4rem',    
+        '7xl': '5rem',     
+        '8xl': '6rem',     
+        '9xl': '8rem',     
+        '10xl': '10rem',   
+      },
     },
   },
   plugins: [

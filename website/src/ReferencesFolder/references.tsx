@@ -7,7 +7,7 @@ function References() {
         References
       </h1>
       <div className="flex justify-center flex-col w-full items-center font-TimesNewRoman  text-wrap text-lg text-white">
-        <div className="md:w-5/6 bg-black text-lg 4xl:text-4xl p-4 md:p-14">
+        <div className="md:w-5/6  bg-black text-lg 4xl:text-4xl/loose p-4 md:p-14">
           <p>
             I have been supervising Rasmus Toft Hermansen during his Computer
             Science internship and AP project period at Hansen Technologies in
