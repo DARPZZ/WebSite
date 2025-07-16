@@ -20,6 +20,7 @@ export default {
       extreme : '1500'
       },
       fontFamily: {
+        inter: ['Inter', 'sans-serif'],
         Alegreya: ['"Alegreya"', 'Alegreya'],
         TimesNewRoman: ['"Times New Roman"', 'Times', 'serif'],
       },

@@ -4,14 +4,15 @@ import ProjectCard from "./ProjectCard";
 import MinesweerperPicture from "../assets/MinesweeperPicture.png";
 import SnakePicture from "../assets/Snake.png";
 import SensorPicture from "../assets/Sensor.png";
-import DiscordPicture from "../assets/Discord bot.png";
+
 import NameGuidePicture from "../assets/NameGuide.png";
 import WalkAppPicture from "../assets/WalkApp.jpg";
 import HousePricesPic from "../assets/HousePricesPic.jpg";
-import Recipthelper from "../assets/Recipthelper.png"
-import re from "../assets/re.png"
+import Recipthelper from "../assets/Recipthelper.png";
+import re from "../assets/re.png";
+import csPicture from "../assets/csPicture.png"
 function Projects() {
-  const startGithub = "https://github.com/DARPZZ/"
+  const startGithub = "https://github.com/DARPZZ/";
   //#region Projects
   const Blackjack = {
     name: "Blackjack",
@@ -69,15 +70,14 @@ function Projects() {
       "Built with React and Remix, this web application helps you securely store and organize your purchase receipts in one place. Whether something breaks, needs a warranty claim, or a return, you’ll always know where to find your proof of purchase.",
     seeCode: `${startGithub}ReciptHelper`,
     caption: "Recipt Helper",
-    visitWebSite: "https://darpzz.github.io/ReciptHelper/"
-    
+    visitWebSite: "https://darpzz.github.io/ReciptHelper/",
   };
 
   const discord = {
     name: "Discord bot",
-    image: DiscordPicture,
+    image: csPicture,
     description:
-      "My Discord bot, written in Python, serves the purpose of providing real-time match updates and information across different sports to users on Discord.",
+      "My Discord bot, written in Python, provides real-time match updates and information across different sports to users on Discord. It also includes a CS2 player stats feature, allowing users to check key performance data — including kills, deaths, win rate, and K/D ratio — all through Discord commands.",
     seeCode: `${startGithub}Discord_BOT`,
     caption: "Discord bot",
   };
@@ -89,11 +89,11 @@ function Projects() {
     seeCode: `${startGithub}CityRoundApp`,
     caption: "Walk App",
   };
-   const extensionWeb = {
+  const extensionWeb = {
     name: "Web extension",
     image: re,
-    description:"A collection of all my cross web browser extensions",
-    extension:"#/see/extensions",
+    description: "A collection of all my cross web browser extensions",
+    extension: "#/see/extensions",
     caption: "Web extension",
   };
 
@@ -107,7 +107,17 @@ function Projects() {
       </div>
       <div className="flex justify-center">
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 4xl:gap-6">
+          <ProjectCard project={HousePrices}></ProjectCard>
+          <ProjectCard project={discord}></ProjectCard>
+          <ProjectCard project={ReciptHelper}></ProjectCard>
+          <ProjectCard project={extensionWeb}></ProjectCard>
+          <ProjectCard project={walkApp}></ProjectCard>
+          <ProjectCard project={sensor}></ProjectCard>
           <ProjectCard project={Blackjack}></ProjectCard>
+          <ProjectCard project={minesweeper}></ProjectCard>
+          <ProjectCard project={snakeGame}></ProjectCard>
+
+          {/* <ProjectCard project={Blackjack}></ProjectCard>
           <ProjectCard project={minesweeper}></ProjectCard>
           <ProjectCard project={snakeGame}></ProjectCard>
           <ProjectCard project={sensor}></ProjectCard>
@@ -115,7 +125,7 @@ function Projects() {
           <ProjectCard project={discord}></ProjectCard>
           <ProjectCard project={walkApp}></ProjectCard>
           <ProjectCard project={HousePrices}></ProjectCard>
-          <ProjectCard project={extensionWeb}></ProjectCard>
+          <ProjectCard project={extensionWeb}></ProjectCard> */}
         </div>
       </div>
     </div>

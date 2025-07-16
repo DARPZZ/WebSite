@@ -13,6 +13,12 @@ function References() {
             Science internship and AP project period at Hansen Technologies in
             our office in Sønderborg.
           </p>
+          <br/>
+           <p>
+            I have been very pleased with supervising Rasmus during this half
+            year given his strong commitment and drive to challenge the status
+            quo. I think that Rasmus will be a strong asset to any company.
+          </p>
           <br />
           <p>
             Rasmus has in his 10-week internship period been introduced to our
@@ -41,13 +47,7 @@ function References() {
             milestones. I have been very pleased with the AP project that Rasmus
             has been running in collaboration with us.
           </p>
-          <br />
-          <p>
-            I have been very pleased with supervising Rasmus during this half
-            year given his strong commitment and drive to challenge the status
-            quo. I think that Rasmus will be a strong asset to any company.
-          </p>
-          <br />
+         
           <p className="text-right">
             Jacob Hansen, Senior Service Delivery Manager, Hansen Denmark
           </p>
