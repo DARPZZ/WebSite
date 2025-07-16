@@ -10,7 +10,7 @@ function Home() {
     <div className="w-full h-full">
       <div className=" flex flex-col  items-center justify-center h-screen">
         <h1 className="text-white font-extrabold md:text-8xl 4xl:text-10xl text-6xl">
-          WHO'S
+          Who's
         </h1>
         <div className=" space-x-1 flex flex-row  text-green-400 font-extrabold 4xl:text-10xl text-6xl md:text-8xl">
           <h1 className="hover:text-white hover:scale-[1.3] ">R</h1>
