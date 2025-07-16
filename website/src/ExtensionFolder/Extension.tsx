@@ -19,7 +19,7 @@ function Extension() {
     seeCode: `${startGithub}Anonymous-Instergram-extension`,
     description:
       "This extension is designed to keep your Instagram activity completely anonymous. It hides your presence while you browse, view stories, and interact on the platform without revealing your identity. Stay invisible while enjoying Instagram with full privacy.",
-    name: "Instergram",
+    name: "Instagram",
     img: PrivateInstergramPic,
   };
   const AdRemover = {

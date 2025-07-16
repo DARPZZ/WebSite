@@ -10,7 +10,7 @@ function Contact() {
         Contact
       </h1>
       <div className=" flex flex-col justify-center items-center mt-14">
-        <h1 className="font-mono text-white text-2xl 4xl:text-4xl underline">
+        <h1 className="font-inter text-white text-2xl 4xl:text-4xl ">
           You can contact me on these platforms
         </h1>
         <div className=" grid grid-cols-3 gap-28 pt-10 pb-5">
