@@ -68,7 +68,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             <img
               src={project.image}
               alt={project.name}
-              className="rounded-lg 4xl:w-[35rem] 4xl:h-96    h-60 w-96 object-cover"
+              className="rounded-lg 4xl:w-[35rem] 4xl:h-96    h-60 w-96 "
             />
           </Reveal>
         </Parallax>

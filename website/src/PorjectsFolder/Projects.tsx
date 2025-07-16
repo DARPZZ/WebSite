@@ -7,9 +7,10 @@ import SensorPicture from "../assets/Sensor.png";
 import DiscordPicture from "../assets/Discord bot.png";
 import NameGuidePicture from "../assets/NameGuide.png";
 import WalkAppPicture from "../assets/WalkApp.jpg";
-import HousePricesPic from "../assets/HousePricesPic.jpg";
-import Recipthelper from "../assets/Recipthelper.png"
-import re from "../assets/re.png"
+import HousePricesPic from "../assets/HousePricePicture.png";
+import Recipthelper from "../assets/Recipthelper.png";
+import re from "../assets/re.png";
+import csPicture from "../assets/csPicture.png"
 function Projects() {
   const startGithub = "https://github.com/DARPZZ/"
   //#region Projects
@@ -77,7 +78,7 @@ function Projects() {
     name: "Discord bot",
     image: DiscordPicture,
     description:
-      "My Discord bot, written in Python, serves the purpose of providing real-time match updates and information across different sports to users on Discord.",
+      "My Discord bot, written in Python, provides real-time match updates and information across different sports to users on Discord. It also includes a CS2 player stats feature, allowing users to check key performance data — including kills, deaths, win rate, and K/D ratio — all through Discord commands.",
     seeCode: `${startGithub}Discord_BOT`,
     caption: "Discord bot",
   };
@@ -85,7 +86,7 @@ function Projects() {
     name: "Walk app",
     image: WalkAppPicture,
     description:
-      "My app is written in MAUI and intergrates Google maps. The aim of the app is the walk the hole city around",
+      "Ready to discover every corner of the city on foot? My MAUI app, powered by Google Maps, is your ultimate guide for comprehensive urban exploration",
     seeCode: `${startGithub}CityRoundApp`,
     caption: "Walk App",
   };
