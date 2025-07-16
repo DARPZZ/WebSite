@@ -1,7 +1,20 @@
 import PersonBillede from "../assets/Personbillede.jpg";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
+import { useEffect, useState } from "react";
 function About() {
+  const [age, setAge] = useState("")
+  function calculateAge(birthDate: Date): number {
+  const today = new Date();
+    const ageDiff = today.getTime() - birthDate.getTime();
+    const ageDate = new Date(ageDiff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970); 
+  }
+  
+   useEffect(() => {
+    setAge(calculateAge(new Date(2001, 8, 15)).toString())
+  },[age]);
+  
   return (
     <div className="  h-full w-full px-8">
       <div className="flex md:flex-row flex-col items-center justify-center ">
@@ -13,7 +26,7 @@ function About() {
             <Reveal>
               <p>
                 {" "}
-                My name is Rasmus, and I'm a 24-year-old recent computer science
+                My name is Rasmus, and I'm a {age}-year-old recent computer science
                 graduate from Denmark. I’m deeply motivated by a continuous
                 curiosity and a genuine passion for exploring complex
                 technologies and tackling challenging problems.{" "}
