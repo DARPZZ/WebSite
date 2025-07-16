@@ -6,6 +6,31 @@ interface ThreeJSStackProps {
   techStack: { name: string; iconUrl: string }[];
   onTechClosest?: (techName: string) => void;
 }
+enum sizeEnum{
+  mobile = 768,
+  smallPC = 1280,
+  smallDekstop = 1800,
+  dekstop = 2183,
+  bigDekstop = 2524
+}
+
+function DecideRadiusBasedOnScreen(width: number): number {
+  if (width <= sizeEnum.mobile) {
+    return 20;
+  } else if (width <= sizeEnum.smallPC) {
+    return 28;
+  } else if (width <= sizeEnum.smallDekstop) {
+    return 35;
+  } else if (width <= sizeEnum.dekstop) {
+    return 42;
+  }else if(width <= sizeEnum.bigDekstop)
+  {
+    return 46
+  }else 
+  {
+   return 60
+  }
+}
 
 const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
   title,
@@ -19,7 +44,6 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
   const iconsRef = useRef<THREE.Mesh[]>([]);
   const [texturesLoaded, setTexturesLoaded] = useState(false);
   const [closestTech, setClosestTech] = useState<string>("");
-
   useEffect(() => {
     let animationId: number | null = null;
 
@@ -109,7 +133,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
 
       iconsRef.current.forEach((icon, index) => {
         const containerWidth = containerRef.current!.clientWidth;
-        const radius = containerWidth / 37;
+        const radius =containerWidth / DecideRadiusBasedOnScreen(containerWidth);
         const speed = 0.33;
         const angle = time * speed + (index / techStack.length) * (2 * Math.PI);
 
@@ -117,8 +141,7 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
         const z = Math.sin(angle) * radius;
         icon.position.set(x, 0, z);
 
-        const distance = cameraPosition? cameraPosition.distanceTo(icon.position) : 0;
-            
+        const distance = cameraPosition? cameraPosition.distanceTo(icon.position): 0;
         const maxDistance = 40;
         if (distance < maxDistance) {
           const easingFactor = 0.1;
@@ -153,7 +176,6 @@ const ThreeJSStack: React.FC<ThreeJSStackProps> = ({
           cameraRef.current.aspect = width / height;
           cameraRef.current.updateProjectionMatrix();
         }
-        
       }
     };
 

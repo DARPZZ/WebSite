@@ -24,8 +24,7 @@ function Tech() {
       <h2 className=" text-5xl justify-center 4xl:text-8xl 4xl:mb-16 items-center flex  md:items-baseline font-extrabold text-green-400 font-Alegreya">
         Tech Stack
       </h2>
-      {screenWidth > 900 && screenWidth < 2000 ? (
-        
+      {screenWidth > 900 && screenWidth < 3480 ? (
         <TechStack />
       ) : (
         <div>
