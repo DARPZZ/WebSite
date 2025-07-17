@@ -19,17 +19,16 @@ function About() {
     <div className="  h-full w-full px-8">
       <div className="flex md:flex-row flex-col items-center justify-center ">
         <div className="   text-white">
-          <h1 className="font-extrabold text-5xl 4xl:text-8xl text-green-400 font-serif flex item  justify-center md:justify-start  pb-5">
+          <h1 className="font-extrabold text-5xl 4xl:text-8xl text-green-400 font-inter flex item  justify-center md:justify-start  pb-5">
             About me
           </h1>
-          <div className="text-lg font-Alegreya 4xl:text-4xl/relaxed font-semibold">
+          <div className="text-lg  font-manrope 4xl:text-4xl/relaxed font-semibold">
             <Reveal>
               <p>
-                {" "}
                 My name is Rasmus, and I'm a {age}-year-old recent computer science
                 graduate from Denmark. I’m deeply motivated by a continuous
                 curiosity and a genuine passion for exploring complex
-                technologies and tackling challenging problems.{" "}
+                technologies and tackling challenging problems.
               </p>
             </Reveal>
             <br />

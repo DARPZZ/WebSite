@@ -74,13 +74,13 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         </Parallax>
         </div>
         <Reveal>
-          <h1 className="break-words mt-5 4xl:text-5xl text-2xl font-Alegreya  text-green-400 font-bold">
+          <h1 className="break-words mt-5 4xl:text-5xl text-2xl font-inter  text-green-400 font-bold">
             {project.caption}
           </h1>
         </Reveal>
         <div className="mt-5 ">
           <Reveal>
-            <p className="break-words font-Alegreya 4xl:text-3xl/relaxed  text-white text-lg">
+            <p className="break-words font-manrope 4xl:text-3xl/relaxed  text-white text-lg">
               {project.description}
             </p>
           </Reveal>
@@ -95,7 +95,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className=" 4xl:py-12 4xl:text-4xl   font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className=" 4xl:py-12 4xl:text-4xl   font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See code
                 </button>
               </a>
@@ -104,7 +104,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           {hasLink && (
             <div className=" pt-10 w-full">
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <button className="4xl:py-12 4xl:text-4xl   font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className="4xl:py-12 4xl:text-4xl   font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See program
                 </button>
               </a>
@@ -117,8 +117,8 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="4xl:py-12 4xl:text-4xl  font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
-                  See program
+                <button className="4xl:py-12 4xl:text-4xl  font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                  Visit website
                 </button>
               </a>
             </div>
@@ -126,7 +126,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           {isExtension && (
             <div className="pt-10 w-full">
               <a href={project.extension}>
-                <button className="4xl:py-12 4xl:text-4xl border font-Alegreya text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className="4xl:py-12 4xl:text-4xl border font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See My extensions
                 </button>
               </a>

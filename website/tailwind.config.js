@@ -21,8 +21,7 @@ export default {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        Alegreya: ['"Alegreya"', 'Alegreya'],
-        TimesNewRoman: ['"Times New Roman"', 'Times', 'serif'],
+        manrope: ['Manrope', 'sans-serif'],
       },
       screens: {
 

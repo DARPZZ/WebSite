@@ -6,7 +6,7 @@ import ContactComponent from "./ContactComponent";
 function Contact() {
   return (
     <div className="w-full h-full px-5">
-      <h1 className="text-5xl 4xl:text-8xl justify-center items-center flex  md:items-baseline font-extrabold text-green-400 font-mono">
+      <h1 className="text-5xl 4xl:text-8xl justify-center items-center flex  md:items-baseline font-extrabold text-green-400 font-inter">
         Contact
       </h1>
       <div className=" flex flex-col justify-center items-center mt-14">

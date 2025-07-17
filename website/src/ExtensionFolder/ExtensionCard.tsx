@@ -24,7 +24,7 @@ const ExtensionCard: React.FC<Props> = ({ project }) => {
           src={project.img}
           alt={project.name}
         />
-        <h1 className="text-lg 4xl:text-3xl/loose text-white font-semibold font-Alegreya mt-5">
+        <h1 className="text-lg 4xl:text-3xl/loose text-white font-semibold font-manrope mt-5">
           {project.description}
         </h1>
       </div>
@@ -35,7 +35,7 @@ const ExtensionCard: React.FC<Props> = ({ project }) => {
             href={project.seeCode}
             target="_blank"
             rel="noopener noreferrer"
-            className="4xl:py-10  4xl:text-4xl font-Alegreya text-xl bg-purple-400 flex items-center justify-center w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
+            className="4xl:py-10  4xl:text-4xl font-manrope text-lg bg-purple-400 flex items-center justify-center w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
           >
             See code
           </a>
@@ -45,7 +45,7 @@ const ExtensionCard: React.FC<Props> = ({ project }) => {
             href={project.downLoadInstruction}
             target="_blank"
             rel="noopener noreferrer"
-            className="4xl:py-10 4xl:text-4xl font-Alegreya text-xl bg-purple-400 flex items-center justify-center w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
+            className="4xl:py-10 4xl:text-4xl font-manrope text-lg bg-purple-400 flex items-center justify-center w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md"
           >
             Download guide
           </a>

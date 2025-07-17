@@ -95,7 +95,7 @@ function Projects() {
   const extensionWeb = {
     name: "Web extension",
     image: re,
-    description: "A collection of all my cross web browser extensions",
+    description: "Tired of cluttered tabs or repetitive tasks? I build cross-browser extensions that streamline your online experience, making the web work smarter, not harder, for you. Check out some of my creations designed to tackle everyday frustrations and boost your productivity.",
     extension: "#/see/extensions",
     caption: "Web extension",
   };
@@ -104,7 +104,7 @@ function Projects() {
   return (
     <div className=" flex items-center justify-center  flex-col h-full w-full px-5">
       <div className="">
-        <h1 className="text-5xl 4xl:text-8xl pb-8 font-extrabold leading-relaxed font-Alegreya text-green-400 ">
+        <h1 className="text-5xl 4xl:text-8xl pb-8 font-extrabold leading-relaxed font-inter text-green-400 ">
           Projects
         </h1>
       </div>
