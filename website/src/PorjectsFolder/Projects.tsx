@@ -31,6 +31,7 @@ function Projects() {
       "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
     seeCode: `${startGithub}HousePriceing`,
     caption: "House prices",
+    youtubeLink: "rt4ldd71Pxo",
   };
 
   const minesweeper = {
@@ -80,6 +81,8 @@ function Projects() {
       "My Discord bot, written in Python, provides real-time match updates and information across different sports to users on Discord. It also includes a CS2 player stats feature, allowing users to check key performance data — including kills, deaths, win rate, and K/D ratio — all through Discord commands.",
     seeCode: `${startGithub}Discord_BOT`,
     caption: "Discord bot",
+    youtubeLink: "fS7oVe5uY0E",
+    
   };
   const walkApp = {
     name: "Walk app",
