@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
-import Modal from "../Modal";
 
-import useScreenSize from "../useScreenSize";
 interface GitHubProject {
   name: string;
   image: string;
@@ -126,7 +124,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           {isExtension && (
             <div className="pt-10 w-full">
               <a href={project.extension}>
-                <button className="4xl:py-12 4xl:text-4xl border font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                <button className="4xl:py-12 4xl:text-4xl  font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
                   See My extensions
                 </button>
               </a>
