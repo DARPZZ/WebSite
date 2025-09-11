@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import MinesweerperPicture from "../assets/MinesweeperPicture.png";
 import SnakePicture from "../assets/Snake.png";
 import SensorPicture from "../assets/Sensor.png";
-
+import carAppPicture from "../assets/carAppPic.png"
 import NameGuidePicture from "../assets/NameGuide.png";
 import WalkAppPicture from "../assets/WalkApp.jpg";
 import HousePricesPic from "../assets/HousePricePicture.png";
@@ -92,6 +92,15 @@ function Projects() {
     seeCode: `${startGithub}CityRoundApp`,
     caption: "Walk App",
   };
+  const carApp={
+    name: "Vehicle Recognition App",
+    image: carAppPicture,
+    description:
+      "This mobile app allows users to snap a picture of a car and instantly retrieve the license plate number and vehicle details such as make, model, and year using image recognition and OCR technologies to extract data in real time.",
+    seeCode: `${startGithub}Car-app`,
+    caption: "Vehicle Recognition App",
+
+  }
   const extensionWeb = {
     name: "Web extension",
     image: re,
@@ -115,6 +124,7 @@ function Projects() {
           <ProjectCard project={ReciptHelper}></ProjectCard>
           <ProjectCard project={extensionWeb}></ProjectCard>
           <ProjectCard project={walkApp}></ProjectCard>
+          <ProjectCard project={carApp}></ProjectCard>
           <ProjectCard project={sensor}></ProjectCard>
           <ProjectCard project={Blackjack}></ProjectCard>
           <ProjectCard project={minesweeper}></ProjectCard>
