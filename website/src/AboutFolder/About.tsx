@@ -50,7 +50,7 @@ function About() {
         </div>
         <div className="w-full pt-5 md:pl-16 pr-5 ">
           <Reveal>
-            <img className="rounded-lg " src={PersonBillede} />
+            <img className="rounded-lg " src={PersonBillede} alt="self portrait" />
           </Reveal>
         </div>
       </div>

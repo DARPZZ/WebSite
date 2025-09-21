@@ -1,9 +1,10 @@
 import React from "react";
 interface comps{
     icon:string,
-    link:string
+    link:string,
+    imgAlt:string,
 }
-function ContactComponent({icon,link}:comps) {
+function ContactComponent({icon,link,imgAlt}:comps) {
   return (
     <div>
       <a
@@ -11,7 +12,7 @@ function ContactComponent({icon,link}:comps) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="md:size-28 4xl:size-44" src={icon} />
+        <img className="md:size-28 4xl:size-44" src={icon} alt={imgAlt} />
       </a>
     </div>
   );

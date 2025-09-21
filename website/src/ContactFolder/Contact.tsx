@@ -17,14 +17,17 @@ function Contact() {
           <ContactComponent
             icon={GmailImg}
             link="https://mail.google.com/mail/?view=cm&fs=1&to=rasmustofthermansen@gmail.com"
+            imgAlt="Gmail"
           />
           <ContactComponent
             icon={linkedin}
             link="https://www.linkedin.com/in/rasmus-toft-b880a827b/"
+            imgAlt="Linkedin"
           />
           <ContactComponent
             icon={githubLogo}
             link="https://github.com/DARPZZ"
+            imgAlt="Github"
           />
         </div>
       </div>
