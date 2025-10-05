@@ -23,6 +23,7 @@ const ExtensionCard: React.FC<Props> = ({ project }) => {
           className="mt-5 rounded-lg 4xl:h-80 h-60 w-full object-cover"
           src={project.img}
           alt={project.name}
+          loading="lazy"
         />
         <h1 className="text-lg 4xl:text-3xl/loose text-white font-semibold font-manrope mt-5">
           {project.description}

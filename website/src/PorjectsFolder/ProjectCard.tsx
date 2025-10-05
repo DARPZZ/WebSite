@@ -59,14 +59,13 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
     <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm 4xl:max-w-2xl  flex flex-col justify-between">
       <div >
         <div className="w-full flex flex-col  items-center 4xl:p-5">
-
-        
         <Parallax>
           <Reveal>
             <img
               src={project.image}
               alt={project.name}
-              className="rounded-lg 4xl:w-[35rem] 4xl:h-96    h-60 w-96 "
+              className="rounded-lg 4xl:w-[35rem] 4xl:h-96 h-60 w-96 "
+              loading="lazy"
             />
           </Reveal>
         </Parallax>
