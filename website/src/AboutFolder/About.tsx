@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 function About() {
   const [age, setAge] = useState("")
   function calculateAge(birthDate: Date): number {
-  const today = new Date();
+    const today = new Date();
     const ageDiff = today.getTime() - birthDate.getTime();
     const ageDate = new Date(ageDiff);
     return Math.abs(ageDate.getUTCFullYear() - 1970); 

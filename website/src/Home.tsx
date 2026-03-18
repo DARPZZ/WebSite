@@ -5,6 +5,7 @@ import TechStack from "./TechFolder/TechStack";
 import Tech from "./TechFolder/Tech";
 import Contact from "./ContactFolder/Contact";
 import References from "./ReferencesFolder/references";
+import WorkExperience from "./workExperience/WorkExperience";
 function Home() {
   return (
     <div className="w-full h-full">
@@ -38,7 +39,13 @@ function Home() {
           id="References"
           className="md:justify-center md:items-center justify-start items-start flex flex-col"
         >
-         <References/>
+          <References />
+        </div>
+        <div
+          className=" md:justify-center md:items-center justify-start items-start flex flex-col"
+          id="contact"
+        >
+          <WorkExperience />
         </div>
         <div
           className=" md:justify-center md:items-center justify-start items-start flex flex-col"
