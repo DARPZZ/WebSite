@@ -49,7 +49,7 @@ function Home() {
         </div>
         <div
           className=" md:justify-center md:items-center justify-start items-start flex flex-col"
-          id="tech"
+          id="WorkExperience"
         >
           <Tech />
         </div>
