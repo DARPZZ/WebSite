@@ -34,15 +34,11 @@ export default function WorkExperience() {
       </h1>
       <div className="relative w-full md:p-16">
         <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-green-400 to-transparent transform -translate-x-1/2" />
-        <Reveal>
           <WorkExperienceCard prop={vurderingsstyrelsen} side="left" />
-        </Reveal>
-        <Reveal>
-          <WorkExperienceCard prop={hansenTechonologies} side="right" />
-        </Reveal>
-        <Reveal>
-          <WorkExperienceCard prop={EASV} side="left" />
-        </Reveal>
+
+        <WorkExperienceCard prop={hansenTechonologies} side="right" />
+
+        <WorkExperienceCard prop={EASV} side="left" />
       </div>
     </div>
   );
