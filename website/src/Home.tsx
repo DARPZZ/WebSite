@@ -41,15 +41,10 @@ function Home() {
         >
           <References />
         </div>
-        <div
-          className=" md:justify-center md:items-center justify-start items-start flex flex-col"
-          id="contact"
-        >
           <WorkExperience />
-        </div>
         <div
           className=" md:justify-center md:items-center justify-start items-start flex flex-col"
-          id="WorkExperience"
+          id="tech"
         >
           <Tech />
         </div>

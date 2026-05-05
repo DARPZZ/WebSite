@@ -36,6 +36,12 @@ function NavBar() {
           </button>
           <button
             className="w-full py-2 hover:text-pink-300"
+            onClick={() => decideID("References", setIsOpen(false))}
+          >
+            References
+          </button>
+          <button
+            className="w-full py-2 hover:text-pink-300"
             onClick={() => decideID("tech", setIsOpen(false))}
           >
             Skills
@@ -45,12 +51,6 @@ function NavBar() {
             onClick={() => decideID("contact", setIsOpen(false))}
           >
             Contact
-          </button>
-          <button
-            className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("References", setIsOpen(false))}
-          >
-            References
           </button>
         </div>
       </div>
@@ -74,10 +74,7 @@ function NavBar() {
         >
           References
         </button>
-        <button
-          className="hover:text-sky-300"
-          onClick={() => decideID("tech")}
-        >
+        <button className="hover:text-sky-300" onClick={() => decideID("tech")}>
           Skills
         </button>
         <button
@@ -86,7 +83,6 @@ function NavBar() {
         >
           Contact
         </button>
-       
       </div>
     </div>
   );
