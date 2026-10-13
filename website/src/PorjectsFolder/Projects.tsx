@@ -4,15 +4,14 @@ import ProjectCard from "./ProjectCard";
 import MinesweerperPicture from "../assets/MinesweeperPicture.png";
 import SnakePicture from "../assets/Snake.png";
 import SensorPicture from "../assets/Sensor.png";
-import carAppPicture from "../assets/carAppPic.png"
+import carAppPicture from "../assets/carAppPic.png";
 import NameGuidePicture from "../assets/NameGuide.png";
 import WalkAppPicture from "../assets/WalkApp.jpg";
 import HousePricesPic from "../assets/HousePricePicture.png";
 import Recipthelper from "../assets/Recipthelper.png";
 import re from "../assets/re.png";
-import csPicture from "../assets/csPicture.png"
+import csPicture from "../assets/csPicture.png";
 function Projects() {
-  const startGithub = "https://github.com/DARPZZ/";
   //#region Projects
   const Blackjack = {
     name: "Blackjack",
@@ -20,7 +19,7 @@ function Projects() {
     description:
       "My Blackjack game developed in Java, the objective is to get as close as possible to 21 points without exceeding it. " +
       "The game involves a player and a dealer, both receiving cards from a deck of cards. Cards have different values: numbered cards from 2 to 10 have their face value, face cards (jack, queen, king) are valued at 10, and aces can be either 1 or 11 depending on which value benefits the hand more.",
-    seeCode: `${startGithub}Blacjack-real`,
+    seeCode: "Blacjack-real",
     caption: "BlackJack",
     url: "9xZgLO2P3XI",
   };
@@ -29,7 +28,7 @@ function Projects() {
     image: HousePricesPic,
     description:
       "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
-    seeCode: `${startGithub}HousePriceing`,
+    seeCode: "HousePriceing",
     caption: "House prices",
     url: "rt4ldd71Pxo",
   };
@@ -39,7 +38,7 @@ function Projects() {
     image: MinesweerperPicture,
     description:
       "In my Minesweeper game developed in C#, the objective is to clear a board without detonating any hidden mines. The game involves a grid of cells, where some cells contain mines and others are safe to click. The challenge is to use logic and deduction to uncover all safe cells without triggering any mines.",
-    seeCode: `${startGithub}Minesweeper`,
+    seeCode: "Minesweeper",
     caption: "Mine sweeper",
     url: "cn81ERY_OZI",
   };
@@ -49,7 +48,7 @@ function Projects() {
     image: SnakePicture,
     description:
       "Snake game developed in Java, the objective is to control a snake to eat food pellets and grow longer without colliding with itself or the walls. The game involves a snake that moves across a grid, eating food to score points and increase its length. The challenge is to maneuver the snake effectively while avoiding obstacles and hazards.",
-    seeCode: `${startGithub}Snake-game`,
+    seeCode: "Snake-game",
     caption: "Snake game",
     url: "dIuudb07AI0",
   };
@@ -59,7 +58,7 @@ function Projects() {
     image: SensorPicture,
     description:
       "In this Python-based program, I created a  rotating sensor that measures distances to objects around it.",
-    seeCode: `${startGithub}radar-graph`,
+    seeCode: "radar-graph",
     caption: "Sensor",
     url: "mQEmvks-Yds",
   };
@@ -69,7 +68,7 @@ function Projects() {
     image: Recipthelper,
     description:
       "Built with React and Remix, this web application helps you securely store and organize your purchase receipts in one place. Whether something breaks, needs a warranty claim, or a return, you’ll always know where to find your proof of purchase.",
-    seeCode: `${startGithub}ReciptHelper`,
+    seeCode: "ReciptHelper",
     caption: "Recipt Helper",
     visitWebSite: "https://darpzz.github.io/ReciptHelper/",
   };
@@ -79,32 +78,31 @@ function Projects() {
     image: csPicture,
     description:
       "My Discord bot, written in Python, provides real-time match updates and information across different sports to users on Discord. It also includes a CS2 player stats feature, allowing users to check key performance data — including kills, deaths, win rate, and K/D ratio — all through Discord commands.",
-    seeCode: `${startGithub}Discord_BOT`,
+    seeCode: "Discord_BOT",
     caption: "Discord bot",
     url: "fS7oVe5uY0E",
-    
   };
   const walkApp = {
     name: "Walk app",
     image: WalkAppPicture,
     description:
       "Ready to discover every corner of the city on foot? My MAUI app, powered by Google Maps, is your ultimate guide for comprehensive urban exploration",
-    seeCode: `${startGithub}CityRoundApp`,
+    seeCode: "CityRoundApp",
     caption: "Walk App",
   };
-  const carApp={
+  const carApp = {
     name: "Vehicle Recognition App",
     image: carAppPicture,
     description:
       "This mobile app allows users to snap a picture of a car and instantly retrieve the license plate number and vehicle details such as make, model, and year using image recognition and OCR technologies to extract data in real time.",
-    seeCode: `${startGithub}Car-app`,
+    seeCode: "Car-app",
     caption: "Vehicle Recognition App",
-
-  }
+  };
   const extensionWeb = {
     name: "Web extension",
     image: re,
-    description: "Tired of cluttered tabs or repetitive tasks? I build cross-browser extensions that streamline your online experience, making the web work smarter, not harder, for you. Check out some of my creations designed to tackle everyday frustrations and boost your productivity.",
+    description:
+      "Tired of cluttered tabs or repetitive tasks? I build cross-browser extensions that streamline your online experience, making the web work smarter, not harder, for you. Check out some of my creations designed to tackle everyday frustrations and boost your productivity.",
     extension: "#/see/extensions",
     caption: "Web extension",
   };

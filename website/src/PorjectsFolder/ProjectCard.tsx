@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
 
+const startYoutubeUrl = "https://youtu.be/";
+const startGithubUrl = "https://github.com/DARPZZ/";
 const buttonClass =
   "w-full flex items-center justify-center font-manrope text-xl 4xl:text-4xl 4xl:py-12 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-800/80 text-white transition-colors duration-300 hover:bg-neutral-700 hover:border-neutral-500";
 
@@ -87,7 +89,7 @@ const ProjectCard = ({
             {showSetCode && (
               <div className="pt-10 w-full">
                 <a
-                  href={project.seeCode}
+                  href={`${startGithubUrl}${project.seeCode}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={buttonClass}
@@ -99,7 +101,7 @@ const ProjectCard = ({
             {hasLink && (
               <div className="pt-10 w-full">
                 <a
-                  href={url}
+                  href={`${startYoutubeUrl}${url}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={buttonClass}
