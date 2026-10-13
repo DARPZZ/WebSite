@@ -22,7 +22,7 @@ function Projects() {
       "The game involves a player and a dealer, both receiving cards from a deck of cards. Cards have different values: numbered cards from 2 to 10 have their face value, face cards (jack, queen, king) are valued at 10, and aces can be either 1 or 11 depending on which value benefits the hand more.",
     seeCode: `${startGithub}Blacjack-real`,
     caption: "BlackJack",
-    youtubeLink: "9xZgLO2P3XI",
+    url: "9xZgLO2P3XI",
   };
   const HousePrices = {
     name: "House prices",
@@ -31,7 +31,7 @@ function Projects() {
       "Built with .NET MAUI, this app uses your current location to display real-time housing prices and market trends in the area. Instantly see what properties are worth wherever you are.",
     seeCode: `${startGithub}HousePriceing`,
     caption: "House prices",
-    youtubeLink: "rt4ldd71Pxo",
+    url: "rt4ldd71Pxo",
   };
 
   const minesweeper = {
@@ -41,7 +41,7 @@ function Projects() {
       "In my Minesweeper game developed in C#, the objective is to clear a board without detonating any hidden mines. The game involves a grid of cells, where some cells contain mines and others are safe to click. The challenge is to use logic and deduction to uncover all safe cells without triggering any mines.",
     seeCode: `${startGithub}Minesweeper`,
     caption: "Mine sweeper",
-    youtubeLink: "cn81ERY_OZI",
+    url: "cn81ERY_OZI",
   };
 
   const snakeGame = {
@@ -51,7 +51,7 @@ function Projects() {
       "Snake game developed in Java, the objective is to control a snake to eat food pellets and grow longer without colliding with itself or the walls. The game involves a snake that moves across a grid, eating food to score points and increase its length. The challenge is to maneuver the snake effectively while avoiding obstacles and hazards.",
     seeCode: `${startGithub}Snake-game`,
     caption: "Snake game",
-    youtubeLink: "dIuudb07AI0",
+    url: "dIuudb07AI0",
   };
 
   const sensor = {
@@ -61,7 +61,7 @@ function Projects() {
       "In this Python-based program, I created a  rotating sensor that measures distances to objects around it.",
     seeCode: `${startGithub}radar-graph`,
     caption: "Sensor",
-    youtubeLink: "mQEmvks-Yds",
+    url: "mQEmvks-Yds",
   };
 
   const ReciptHelper = {
@@ -81,7 +81,7 @@ function Projects() {
       "My Discord bot, written in Python, provides real-time match updates and information across different sports to users on Discord. It also includes a CS2 player stats feature, allowing users to check key performance data — including kills, deaths, win rate, and K/D ratio — all through Discord commands.",
     seeCode: `${startGithub}Discord_BOT`,
     caption: "Discord bot",
-    youtubeLink: "fS7oVe5uY0E",
+    url: "fS7oVe5uY0E",
     
   };
   const walkApp = {
@@ -129,16 +129,6 @@ function Projects() {
           <ProjectCard project={Blackjack}></ProjectCard>
           <ProjectCard project={minesweeper}></ProjectCard>
           <ProjectCard project={snakeGame}></ProjectCard>
-
-          {/* <ProjectCard project={Blackjack}></ProjectCard>
-          <ProjectCard project={minesweeper}></ProjectCard>
-          <ProjectCard project={snakeGame}></ProjectCard>
-          <ProjectCard project={sensor}></ProjectCard>
-          <ProjectCard project={ReciptHelper}></ProjectCard>
-          <ProjectCard project={discord}></ProjectCard>
-          <ProjectCard project={walkApp}></ProjectCard>
-          <ProjectCard project={HousePrices}></ProjectCard>
-          <ProjectCard project={extensionWeb}></ProjectCard> */}
         </div>
       </div>
     </div>

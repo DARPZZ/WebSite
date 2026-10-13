@@ -1,7 +1,6 @@
 import React from "react";
 import WorkEcperienceComp from "./WorkEcperienceComp";
-import { div } from "framer-motion/client";
-import { isRef } from "@react-three/fiber/dist/declarations/src/core/utils";
+
 export type WorkExperienceCardType = {
   title: string;
   workingTime: string;
@@ -18,32 +17,14 @@ function WorkExperienceCard({ prop, side }: Props) {
   const isLeft = side === "left";
 
   return (
-    <div className="relative  flex items-center mb-20">
-      {isLeft ? (
-        <WorkEcperienceComp
-          title={prop.title}
-          workedWith={prop.workedWith}
-          workingTime={prop.workingTime}
-          icon={prop.icon}
-        />
-      ) : (
-        <div className="w-1/2" />
-      )}
-
-      <div className=" hidden md:block absolute left-1/2 transform -translate-x-1/2 z-50">
-        <div className="4xl:w-8 4xl:h-8 w-4 h-4 bg-green-400 animate-pulse rounded-full shadow-[0_0_10px_#4ade80]" />
+    <div className="relative mb-12 md:mb-20 flex md:items-center">
+      <div className="absolute left-4 md:left-1/2 top-[3.25rem] md:top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="h-4 w-4 4xl:h-8 4xl:w-8 rounded-full border-2 border-green-400 bg-neutral-950 shadow-[0_0_10px_#4ade80]" />
       </div>
 
-      {!isLeft ? (
-        <WorkEcperienceComp
-          title={prop.title}
-          workedWith={prop.workedWith}
-          workingTime={prop.workingTime}
-          icon={prop.icon}
-        />
-      ) : (
-        <div className="w-1/2" />
-      )}
+      <div className={`w-full md:w-1/2 pl-12 pr-4 md:px-10 ${isLeft ? "" : "md:ml-auto"}`}>
+        <WorkEcperienceComp {...prop} />
+      </div>
     </div>
   );
 }

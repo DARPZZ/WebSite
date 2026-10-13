@@ -1,136 +1,135 @@
-import React, { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { Parallax } from "react-next-parallax";
 import { Reveal } from "../Reveal";
 
-interface GitHubProject {
-  name: string;
-  image: string;
-  description?: string;
-  seeCode?: string;
-  caption: string;
-  youtubeLink?: string;
-  visitWebSite?: string;
-  extension?: string;
-}
+const buttonClass =
+  "w-full flex items-center justify-center font-manrope text-xl 4xl:text-4xl 4xl:py-12 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-800/80 text-white transition-colors duration-300 hover:bg-neutral-700 hover:border-neutral-500";
 
-interface Props {
-  project: GitHubProject;
-}
+const ProjectCard = ({
+  project,
+  url = project.url,
+  showSetCode = Boolean(project.seeCode),
+  hasLink = Boolean(url),
+  hasWebsite = Boolean(project.visitWebSite),
+  isExtension = Boolean(project.extension),
+  spotlightColor = "rgba(255, 255, 255, 0.25)",
+  className = "",
+}) => {
+  const cardRef = useRef(null);
+  const [opacity, setOpacity] = useState(0);
 
-const ProjectCard: React.FC<Props> = ({ project }) => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [open, setOpen] = useState<boolean>(false);
-  const [hasLink, setHashLink] = useState<boolean>(true);
-  const [hasWebsite, SetHasWbsite] = useState<boolean>(false);
-  const [showButton, setShowButton] = useState<boolean>(true);
-  const [isExtension, SetIsExtension] = useState<boolean>(false);
-  const [showSetCode, setShowSetCode] = useState<boolean>(false);
-  const url: string = `https://www.youtube.com/watch?v=${project.youtubeLink}`;
-  const handleResize = () => {
-    setScreenWidth(window.innerWidth);
-
-    if (window.innerWidth < 800) {
-      setShowButton(false);
-    } else {
-      setShowButton(true);
-    }
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty("--spot-x", `${e.clientX - rect.left}px`);
+    card.style.setProperty("--spot-y", `${e.clientY - rect.top}px`);
   };
 
-  function CheckForWbsiteAndLink() {
-    project.visitWebSite != null ? SetHasWbsite(true) : SetHasWbsite(false);
-    project.youtubeLink != null ? setHashLink(true) : setHashLink(false);
-    project.extension != null ? SetIsExtension(true) : SetIsExtension(false);
-    project.seeCode != null ? setShowSetCode(true) : setShowSetCode(false);
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    window.dispatchEvent(new Event("resize"));
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [showButton]);
-
-  useEffect(() => {
-    CheckForWbsiteAndLink();
-  }, []);
+  const handleFocus = () => {
+    const card = cardRef.current;
+    if (card) {
+      card.style.setProperty("--spot-x", "50%");
+      card.style.setProperty("--spot-y", "50%");
+    }
+    setOpacity(0.6);
+  };
 
   return (
-    <div className="rounded-lg p-5 bg-gradient-to-r from-blue-500 to-purple-500 max-w-sm 4xl:max-w-2xl  flex flex-col justify-between">
-      <div >
-        <div className="w-full flex flex-col  items-center 4xl:p-5">
-        <Parallax>
-          <Reveal>
-            <img
-              src={project.image}
-              alt={project.name}
-              className="rounded-lg 4xl:w-[35rem] 4xl:h-96 h-60 w-96 "
-              loading="lazy"
-            />
-          </Reveal>
-        </Parallax>
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setOpacity(1)}
+      onMouseLeave={() => setOpacity(0)}
+      onFocus={handleFocus}
+      onBlur={() => setOpacity(0)}
+      className={`relative overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900 p-5 4xl:p-8 max-w-sm 4xl:max-w-2xl flex flex-col justify-between ${className}`}
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 transition-opacity duration-500 ease-in-out"
+        style={{
+          opacity,
+          background: `radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%), ${spotlightColor}, transparent 80%)`,
+        }}
+      />
+
+      <div className="relative z-10">
+        <div className="w-full flex flex-col items-center 4xl:p-5">
+          <Parallax>
+            <Reveal>
+              <img
+                src={project.image}
+                alt={project.name}
+                className="rounded-xl h-60 w-96 4xl:w-[35rem] 4xl:h-96 object-cover"
+                loading="lazy"
+              />
+            </Reveal>
+          </Parallax>
         </div>
         <Reveal>
-          <h1 className="break-words mt-5 4xl:text-5xl text-2xl font-inter  text-green-400 font-bold">
+          <h1 className="break-words mt-5 text-2xl 4xl:text-5xl font-inter font-bold text-white">
             {project.caption}
           </h1>
         </Reveal>
-        <div className="mt-5 ">
+        <div className="mt-5">
           <Reveal>
-            <p className="break-words font-manrope 4xl:text-3xl/relaxed  text-white text-lg">
+            <p className="break-words font-manrope text-lg 4xl:text-3xl/relaxed text-neutral-400">
               {project.description}
             </p>
           </Reveal>
         </div>
       </div>
-      <Reveal width="100%">
-        <div className=" flex md:flex-row flex-col md:space-x-5">
-          {showSetCode && (
-            <div className="pt-10 w-full">
-              <a
-                href={project.seeCode}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className=" 4xl:py-12 4xl:text-4xl   font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+
+      <div className="relative z-10">
+        <Reveal width="100%">
+          <div className="flex flex-col md:flex-row md:space-x-5">
+            {showSetCode && (
+              <div className="pt-10 w-full">
+                <a
+                  href={project.seeCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClass}
+                >
                   See code
-                </button>
-              </a>
-            </div>
-          )}
-          {hasLink && (
-            <div className=" pt-10 w-full">
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                <button className="4xl:py-12 4xl:text-4xl   font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                </a>
+              </div>
+            )}
+            {hasLink && (
+              <div className="pt-10 w-full">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClass}
+                >
                   See program
-                </button>
-              </a>
-            </div>
-          )}
-          {hasWebsite && (
-            <div className="pt-10 w-full">
-              <a
-                href={project.visitWebSite}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="4xl:py-12 4xl:text-4xl  font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                </a>
+              </div>
+            )}
+            {hasWebsite && (
+              <div className="pt-10 w-full">
+                <a
+                  href={project.visitWebSite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClass}
+                >
                   Visit website
-                </button>
-              </a>
-            </div>
-          )}
-          {isExtension && (
-            <div className="pt-10 w-full">
-              <a href={project.extension}>
-                <button className="4xl:py-12 4xl:text-4xl  font-manrope text-xl bg-purple-400 items-center flex flex-col w-full hover:bg-pink-400 text-white px-4 py-2 rounded-md shadow-md">
+                </a>
+              </div>
+            )}
+            {isExtension && (
+              <div className="pt-10 w-full">
+                <a href={project.extension} className={buttonClass}>
                   See My extensions
-                </button>
-              </a>
-            </div>
-          )}
-        </div>
-      </Reveal>
+                </a>
+              </div>
+            )}
+          </div>
+        </Reveal>
+      </div>
     </div>
   );
 };
