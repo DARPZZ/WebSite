@@ -7,14 +7,14 @@ function References() {
         References
       </h1>
       <div className="flex justify-center flex-col w-full items-center font-manrope  text-wrap text-lg text-white">
-        <div className="md:w-5/6  bg-black text-lg 4xl:text-4xl/loose p-4 md:p-14">
+        <div className="md:w-5/6 rounded-md   border-neutral-800 bg-neutral-900 text-lg 4xl:text-4xl/loose p-4 md:p-14">
           <p>
             I have been supervising Rasmus Toft Hermansen during his Computer
             Science internship and AP project period at Hansen Technologies in
             our office in Sønderborg.
           </p>
-          <br/>
-           <p>
+          <br />
+          <p>
             I have been very pleased with supervising Rasmus during this half
             year given his strong commitment and drive to challenge the status
             quo. I think that Rasmus will be a strong asset to any company.
@@ -47,7 +47,7 @@ function References() {
             milestones. I have been very pleased with the AP project that Rasmus
             has been running in collaboration with us.
           </p>
-         
+
           <p className="text-right">
             Jacob Hansen, Senior Service Delivery Manager, Hansen Denmark
           </p>

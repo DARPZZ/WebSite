@@ -55,7 +55,7 @@ function NavBar() {
         </div>
       </div>
 
-      <div className="hidden 4xl:text-7xl font-inter fixed text-4xl z-10 md:flex md:flex-row flex-col space-x-16 space-y-10 w-full pr-10 items-end justify-center">
+      <div className="z-50 hidden 4xl:text-7xl font-inter fixed text-4xl md:flex md:flex-row flex-col space-x-16 space-y-10 w-full pr-10 items-end justify-center">
         <button
           className="hover:text-sky-300"
           onClick={() => decideID("about")}
