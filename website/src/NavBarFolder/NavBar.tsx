@@ -2,89 +2,63 @@ import { useState } from "react";
 import { decideID } from "../scroll";
 import burgermenu from "../assets/whiteBurger.png";
 import xIcon from "../assets/whiteX.png";
+
+const links = [
+  { id: "about", label: "About" },
+  { id: "project", label: "Projects" },
+  { id: "References", label: "References" },
+  { id: "tech", label: "Skills" },
+  { id: "contact", label: "Contact" },
+];
+
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const myIcon = "";
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+
+  const goTo = (id) => {
+    setIsOpen(false);
+    decideID(id);
   };
 
   return (
-    <div className="font-black font-serif text-emerald-400">
-      <div className="fixed text-2xl top-0 left-0 md:hidden w-full z-50">
-        <div className="flex  justify-center items-center ">
+    <nav className="fixed top-0 left-0 z-50 w-full font-black text-emerald-400">
+      <div className="md:hidden">
+        <div className="flex justify-center">
           <button
-            className=" px-6 pt-10 m-2 text-lg text-indigo-100 z-50 transition-colors duration-150 bg-transparent rounded-lg focus:shadow-outline "
-            onClick={toggleMenu}
+            className="m-2 p-4 rounded-lg"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            <img className="" src={isOpen ? xIcon : burgermenu} />
+            <img className="w-8 h-8" src={isOpen ? xIcon : burgermenu} alt="" />
           </button>
         </div>
 
-        <div className={`flex-col  px-4 pb-4  ${isOpen ? "flex" : "hidden"}`}>
-          <button
-            className="w-full py-2 hover:text-pink-300 "
-            onClick={() => decideID("about", setIsOpen(false))}
-          >
-            About
-          </button>
-          <button
-            className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("project", setIsOpen(false))}
-          >
-            Projects
-          </button>
-          <button
-            className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("References", setIsOpen(false))}
-          >
-            References
-          </button>
-          <button
-            className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("tech", setIsOpen(false))}
-          >
-            Skills
-          </button>
-          <button
-            className="w-full py-2 hover:text-pink-300"
-            onClick={() => decideID("contact", setIsOpen(false))}
-          >
-            Contact
-          </button>
-        </div>
+        {isOpen && (
+          <div className="flex flex-col px-4 pb-4 text-2xl font-serif bg-transparent">
+            {links.map((link) => (
+              <button
+                key={link.id}
+                className="w-full py-3 hover:text-pink-300"
+                onClick={() => goTo(link.id)}
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className="z-50 hidden 4xl:text-7xl font-inter fixed text-4xl md:flex md:flex-row flex-col space-x-16 space-y-10 w-full pr-10 items-end justify-center">
-        <button
-          className="hover:text-sky-300"
-          onClick={() => decideID("about")}
-        >
-          About
-        </button>
-        <button
-          className="hover:text-sky-300"
-          onClick={() => decideID("project")}
-        >
-          Projects
-        </button>
-        <button
-          className="hover:text-sky-300"
-          onClick={() => decideID("References")}
-        >
-          References
-        </button>
-        <button className="hover:text-sky-300" onClick={() => decideID("tech")}>
-          Skills
-        </button>
-        <button
-          className="hover:text-sky-300"
-          onClick={() => decideID("contact")}
-        >
-          Contact
-        </button>
+      <div className="hidden md:flex justify-center gap-10 lg:gap-22 py-6 font-inter text-3xl lg:text-4xl 4xl:text-7xl">
+        {links.map((link) => (
+          <button
+            key={link.id}
+            className="hover:text-sky-300"
+            onClick={() => goTo(link.id)}
+          >
+            {link.label}
+          </button>
+        ))}
       </div>
-    </div>
+    </nav>
   );
 }
 
