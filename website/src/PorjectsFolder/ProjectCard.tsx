@@ -58,7 +58,6 @@ const ProjectCard = ({
 
       <div className="relative z-10">
         <div className="w-full flex flex-col items-center 4xl:p-5">
-          <Parallax>
             <Reveal>
               <img
                 src={project.image}
@@ -67,7 +66,6 @@ const ProjectCard = ({
                 loading="lazy"
               />
             </Reveal>
-          </Parallax>
         </div>
         <Reveal>
           <h1 className="break-words mt-5 text-2xl 4xl:text-5xl font-inter font-bold text-white">

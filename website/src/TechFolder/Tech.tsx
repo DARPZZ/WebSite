@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TechStack from "./TechStack";
 import TechMobile from "./TechMobile";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 function Tech() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -9,7 +8,6 @@ function Tech() {
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
-      
     };
 
     window.addEventListener("resize", handleResize);

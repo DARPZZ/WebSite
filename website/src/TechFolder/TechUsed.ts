@@ -1,4 +1,3 @@
-import { string } from "three/examples/jsm/nodes/Nodes.js";
 import reactImg from '../assets/TechnoloPic/react.png';
 import typeScriptImg from '../assets/TechnoloPic/TS.png';
 import cSharpImg from '../assets/TechnoloPic/CSharp.png';
