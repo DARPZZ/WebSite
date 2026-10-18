@@ -35,7 +35,7 @@ function Contact() {
       </h1>
       <div className="mt-4 h-1 w-16 rounded-full bg-green-400/80 4xl:w-28" />
 
-      <p className="mt-8 max-w-xl text-center font-inter text-lg text-gray-300 md:text-xl 4xl:max-w-4xl 4xl:text-4xl">
+      <p className="mt-8  text-center font-inter  text-gray-300 md:text-xl 4xl:text-4xl">
         Want to work together or just say hi? Feel free to reach out on any of
         these platforms.
       </p>

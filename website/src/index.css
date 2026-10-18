@@ -21,8 +21,8 @@ body,
   --font-inter: "Inter", sans-serif;
   --font-manrope: "Manrope", sans-serif;
 
-  --breakpoint-3xl: 1920px;
-  --breakpoint-4xl: 2000px;
+  --breakpoint-3xl: 120rem; 
+  --breakpoint-4xl: 125rem;
 
   --text-6xl: 4rem;
   --text-7xl: 5rem;
